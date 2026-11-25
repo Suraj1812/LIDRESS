@@ -1,86 +1,58 @@
-# Deployment: Vercel + Cloudflare
+# Vercel frontend and Cloudflare backend
 
-The frontend and backend are separate deployments from the same GitHub repository: `Suraj1812/LIDRESS`.
+Repository: `Suraj1812/LIDRESS`.
 
-Configured production frontend: `https://lidress.vercel.app`
+- Frontend: https://lidress.vercel.app
+- API: https://lidress-api.singhsuraj44500-0a3.workers.dev
 
-Production API: `https://lidress-api.singhsuraj44500-0a3.workers.dev`
+## Vercel
 
-## Vercel frontend
+Use the Next.js preset, root directory `frontend`, Node.js 22.12 or later, and the default workspace-aware install/build settings. Enable source files outside the root so the app can import `shared`.
 
-Import the repository and choose:
+Set `API_URL` (or the existing `NEXT_PUBLIC_API_URL`) to the Worker origin without an `/api` suffix. Set `NEXT_PUBLIC_SITE_URL` to the public storefront origin. Browser requests use `/api` on the storefront; its server gateway forwards them to Cloudflare. This keeps HTTP-only session cookies first-party.
 
-| Setting                               | Value                                    |
-| ------------------------------------- | ---------------------------------------- |
-| Project name                          | `lidress`                                |
-| Framework                             | Next.js                                  |
-| Root directory                        | `frontend`                               |
-| Node.js                               | 22.12 or newer                           |
-| Build command                         | `npm run build`                          |
-| Install command                       | Default workspace-aware installation     |
-| Output directory                      | Default Next.js output                   |
-| Include source outside root directory | Enabled (needed for `shared/catalog.ts`) |
+## Cloudflare
 
-Set `NEXT_PUBLIC_API_URL` to the deployed Worker's HTTPS origin, with no `/api` suffix. This value is public and is embedded at build time. Redeploy the frontend when it changes. Do not put a Decart permanent key in Vercel frontend variables.
+The Worker is `lidress-api`. Its configuration is in `backend/wrangler.jsonc` and requires a D1 database named `lidress-commerce`, bound as `DB`. Wrangler can provision the missing database during deployment. Keep the generated database ID in the configuration once provisioned.
 
-You may deploy the frontend first. Free try-on is independent of the API; an unavailable health endpoint simply leaves the optional AI action hidden.
+Git-connected Workers Build settings:
 
-## Cloudflare backend
+| Setting        | Value                                |
+| -------------- | ------------------------------------ |
+| Build root     | Repository root                      |
+| Build command  | `npm ci`                             |
+| Deploy command | `npm run deploy --workspace backend` |
 
-The Worker name is `lidress-api`. It needs no database or object storage.
-
-For a Git-connected Workers Build, use the repository root as the build root, `npm ci` as the build command, and `npm run deploy --workspace backend` as the deploy command. The workspace script resolves `backend/wrangler.jsonc`.
-
-Alternatively, from an authenticated terminal at the repository root:
+Or from an authenticated terminal:
 
 ```sh
 npm ci
 npm run deploy --workspace backend
 ```
 
-The checked-in production values in `backend/wrangler.jsonc` use the assigned Vercel domain. Update them if your frontend domain changes:
+The deploy script publishes the Worker and applies remote D1 migrations. Apply migrations before allowing checkout traffic. The initial migration creates tables and stock triggers; the second seeds 80 inventory rows. Later inventory migrations must preserve existing stock.
 
-```json
-"vars": {
-  "ALLOWED_ORIGINS": "https://lidress.vercel.app",
-  "ENVIRONMENT": "production"
-}
-```
+`ALLOWED_ORIGINS` must contain exact storefront origins, comma-separated. Production uses `https://lidress.vercel.app`. `ENVIRONMENT=production` enables Secure session cookies. Local development overrides both values. Auth is rate-limited to 30 attempts per minute per connecting IP.
 
-Use the actual assigned domain, not an assumed `lidress.vercel.app` domain. Add other exact origins as a comma-separated string only if needed. Avoid wildcard Vercel preview origins. The `dev` script overrides origin and environment for `http://localhost:3000` without changing production settings.
+No camera, AI provider key, or paid AI service is used. Keep runtime credentials out of source control. Back up D1 before destructive schema changes.
 
-The `TOKEN_RATE_LIMITER` binding is declared in the configuration. It limits token creation to five requests per minute per IP. CORS and IP rate limits are basic abuse controls, not user authentication or an account-wide spending budget. For a public paid AI launch, add store authentication or Turnstile plus provider spending controls. Free overlay mode never calls the token endpoint.
+## Verify a deployment
 
-If you enable paid Decart, store the permanent key as a Cloudflare runtime secret:
+1. Worker `/api/health` returns `status: ok` and `database: connected`.
+2. Storefront `/api/products?limit=80` returns 80 products through the gateway.
+3. Open a product and all gallery images; test search, filters, bag and wishlist.
+4. Register a sample account, save an address, and place a clearly labelled demo order.
+5. Check order history and cancellation, then confirm the stock reservation is restored.
+6. Check mobile navigation and keyboard access.
 
-```sh
-cd backend
-npx wrangler secret put DECART_API_KEY
-```
+## API groups
 
-You can also add it in the Cloudflare Worker dashboard's runtime Variables and Secrets section. Do not add it as a plain variable, repository secret file, or build log. Without the key, health returns `aiConfigured: false`, token creation returns `503`, and free try-on continues to work.
+| Prefix                   | Purpose                                             |
+| ------------------------ | --------------------------------------------------- |
+| `/api/auth`              | Register, login, logout, current session            |
+| `/api/products`          | Search/filter products, product details and reviews |
+| `/api/account`           | Saved bag, wishlist and addresses                   |
+| `/api/orders`            | Demo checkout, history, detail and cancellation     |
+| `/api/delivery/:pincode` | Sample PIN-based delivery estimate                  |
 
-## Connect and verify
-
-1. Deploy the Worker and copy its exact HTTPS origin.
-2. Set `NEXT_PUBLIC_API_URL` in Vercel, then deploy/redeploy the frontend.
-3. Put the exact Vercel production origin in the Worker's `ALLOWED_ORIGINS`, set `ENVIRONMENT` to `production`, and redeploy the Worker. Keep source configuration in sync with dashboard changes.
-4. Visit `/api/health` on the Worker. Expect `status: "ok"`.
-5. Open the Vercel site over HTTPS. Test filtering, the bag, and **Start free try-on**.
-6. Allow the camera, keep both shoulders in view, change garments, adjust placement, compare the original, and save a snapshot. Check that **End session** releases the browser camera indicator.
-7. If Decart is enabled, explicitly start its AI mode and verify provider credits and the returned WebRTC stream. A configured key alone does not prove the account has credits or the service is available.
-
-The MediaPipe model and matching runtime are served from the same frontend origin. Camera access works on HTTPS or localhost. No cross-origin isolation headers are required.
-
-## API routes
-
-| Method  | Path                     | Purpose                                      |
-| ------- | ------------------------ | -------------------------------------------- |
-| GET     | `/api/health`            | Health and whether optional AI is configured |
-| GET     | `/api/products`          | Shared men's demo catalogue                  |
-| POST    | `/api/try-on/token`      | Mint a restricted Decart client credential   |
-| OPTIONS | Any allowed-origin route | Browser CORS preflight                       |
-
-Tokens expire after 60 seconds, allow only `lucy-vton-3.6`, are restricted to the requesting frontend origin, and limit realtime sessions to 120 seconds. Responses are not cached. Camera media goes directly from browser to Decart only in explicit paid AI mode; the Worker does not relay or save video.
-
-Reference: [Vercel monorepos](https://vercel.com/docs/monorepos), [Cloudflare Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [Decart SDK](https://docs.platform.decart.ai/sdks/javascript).
+Mutations require an allowed Origin. Authenticated routes require a valid session cookie. Prices and totals are recalculated on the server. Orders reserve stock inside a database transaction; repeated checkout keys return the original order.

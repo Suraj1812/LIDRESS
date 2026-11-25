@@ -1,12 +1,11 @@
-# Demo assets
+# Catalogue assets
 
-The catalogue uses illustrative men's product imagery. These are not LIDRESS inventory listings or claims of brand affiliation. Replace demo assets with your own catalogue before commercial use.
+The store contains 80 demo products and 500 locally served gallery files. Prices, stock seeds and catalogue ratings are illustrative. Brand names describe demo items; there is no claimed affiliation.
 
-- Men's editorial photograph: [Unsplash](https://images.unsplash.com/photo-1488161628813-04466f872be2).
-- Check Oxford, Graphic Crew, Weekend Plaid, Summer Shirt: [DummyJSON men's shirts catalogue](https://dummyjson.com/products/category/mens-shirts), products 83–86.
-- Everyday Henley and Field Jacket: [Fake Store API](https://fakestoreapi.com/), products 2 and 3.
-- Denim jacket: [Stylitics product image](https://content.stylitics.com/images/items/20659209), [original product listing](https://www.macys.com/shop/product/lucky-brand-mens-denim-trucker-jacket?ID=19374673).
+Most full-resolution product photographs come from [DummyJSON](https://dummyjson.com/products). Men's Henley and field jacket photos come from [Fake Store API](https://fakestoreapi.com/). The denim jacket photo comes from [Stylitics](https://content.stylitics.com/images/items/20659209), associated with this [original listing](https://www.macys.com/shop/product/lucky-brand-mens-denim-trucker-jacket?ID=19374673).
 
-`node scripts/prepare-garments.mjs` creates tightly cropped transparent cutouts from the local source images. The script uses edge-connected background removal so white fabric remains visible. Keep an original copy before replacing an asset.
+Each gallery keeps the available source photographs and adds clearly labelled detail crops to reach six or seven images. Detail crops are **not additional camera angles**. No source is upscaled and no blur effect is applied. The gallery labels distinguish original photos from detail views. Obtain your own licensed supplier photography before commercial launch.
 
-Body tracking uses Google's [MediaPipe Pose Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker/web_js). The lite model is downloaded from Google's official [model bucket](https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task). The files under `frontend/public/mediapipe/` are the unmodified WASM runtime distributed with the installed `@mediapipe/tasks-vision` package. Keep them in sync when upgrading the package.
+`shared/products.json` is the source of truth. `node scripts/check-catalog.mjs` verifies the product count, gallery count, readable image files and unique paths. `scripts/prepare-catalog-images.mjs` documents the crop process; it preserves original photographs and rebuilds the labelled detail crops.
+
+The LIDRESS wordmark is the user-approved generated logo. Brand assets live in `frontend/public/brand`; retain alpha transparency when exporting them.

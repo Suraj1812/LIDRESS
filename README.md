@@ -1,89 +1,59 @@
 # LIDRESS
 
-**Your next look. Already on you.**
+**Find your everyday.** A shopping product inspired by familiar Indian marketplaces, with an original olive identity.
 
-A men's clothing storefront with a free, body-tracked virtual fitting room. Built with Next.js, React, TypeScript, Tailwind CSS, MediaPipe, and a Cloudflare Worker. Decart realtime AI is an optional paid integration; it is not required for the default experience.
+Browse 80 demo products across men's fashion, footwear, watches, mobiles, electronics, home, accessories, sports and grooming. Each product has six or seven gallery images: 500 local files in total. The camera and virtual try-on features have been removed.
 
 ## Run locally
 
-Use Node.js 22.12 or newer. From the repository root:
+Requires Node.js 22.12+ and npm.
 
 ```sh
-npm install
-cp frontend/.env.example frontend/.env.local
+npm ci
 npm run dev
 ```
 
-- Storefront: <http://localhost:3000>
-- Backend health: <http://localhost:8787/api/health>
-- Catalogue API: <http://localhost:8787/api/products>
+Open http://localhost:3000. The Cloudflare API runs on http://localhost:8787. Local D1 migrations run automatically. No API key is required. An optional `frontend/.env.local` can override the API origin; see `frontend/.env.example`.
 
-Allow the camera when you click **Start free try-on**. Face the camera with both shoulders visible. Choose another garment, adjust scale and vertical position, compare with the original camera, or download your look. The first start loads the local pose model and WebAssembly runtime.
+## Features
 
-Free mode runs entirely in your browser: no API key, no subscription, no camera uploads. It uses a 2D texture mesh: the torso follows the shoulders and hips, sleeves follow elbows and wrists, and the face and hands are kept in front. It cannot predict real fit or fabric drape; seams and occlusion can still look approximate.
+- Search suggestions, categories, brand/price/rating filters, sorting and pagination.
+- Product galleries, zoom, size selection, related products and reviews.
+- Guest bag and wishlist saved on the device, with account sync after sign-in.
+- Account registration, password sign-in, HTTP-only sessions and saved addresses.
+- Demo checkout, server-calculated totals, welcome coupon, order history and cancellation.
+- Transactional inventory reservations and idempotent order creation in Cloudflare D1.
+- Responsive layouts, keyboard-accessible dialogs and reduced-motion support.
 
-## What works
+Checkout is a simulation: no payments are collected and nothing is shipped. Product prices, ratings and delivery estimates are sample data. Real payments, fulfilment, seller onboarding, email verification and password recovery are not implemented.
 
-- Seven men's pieces: three shirts, two T-shirts, a field jacket, and a denim jacket.
-- Product filtering, price sorting, search, and saved pieces.
-- Shopping bag with size, quantity, and subtotal, saved on the device.
-- Camera permission handling, body tracking, smoothing, scale/position controls, original comparison, and composed snapshots.
-- Cloudflare health, catalogue, and short-lived Decart-token endpoints.
-- Optional Decart WebRTC sessions, garment switching, limited session duration, CORS restrictions, and token rate limiting.
+## Code map
 
-This is a working storefront prototype. Prices and catalogue images are illustrative. Orders, inventory, payments, accounts, and fulfillment are not connected.
+| Folder                  | Responsibility                                |
+| ----------------------- | --------------------------------------------- |
+| `frontend/app`          | Next.js pages and same-origin API gateway     |
+| `frontend/components`   | UI grouped by shopping feature                |
+| `frontend/lib/store.ts` | Guest bag, wishlist and UI state              |
+| `backend/src/routes`    | Auth, catalogue, account and order APIs       |
+| `backend/src/auth.ts`   | Password hashing and session lifecycle        |
+| `backend/migrations`    | Database tables, inventory and stock triggers |
+| `shared/products.json`  | Editable product catalogue                    |
+| `shared/catalog.ts`     | Catalogue types, pricing and totals           |
+| `shared/schemas.ts`     | Shared request validation                     |
+| `scripts`               | Repeatable image preparation and validation   |
 
-## Find your way around the code
+TypeScript is used throughout. React Query manages API data, Zustand manages local shopping state, Radix handles dialogs and menus, React Hook Form and Zod validate forms, and Hono routes the Worker API.
 
-```text
-frontend/
-  app/                 Next.js page, metadata, and responsive styles
-  components/          Header, catalogue, camera view, product selection, dialogs
-  hooks/
-    use-storefront.ts  Store, saved pieces, filtering, and bag state
-    use-fitting-room.ts  Camera lifecycle and optional Decart connection
-    use-body-overlay.ts  On-device pose detection and canvas rendering
-    use-dialog.ts     Accessible dialog focus handling
-    store-context.tsx Shared store access for UI components
-  lib/
-    overlay-geometry.ts  Pure shoulder/torso placement and smoothing
-    garment-renderer.ts  Articulated torso/sleeve textures and face/hand occlusion
-    api.ts            Calls to the Cloudflare backend
-  public/             Local garment images, pose model, and matching WASM runtime
-backend/
-  src/index.ts        Cloudflare Worker routes and token boundary
-  test/               API and overlay geometry tests
-  wrangler.jsonc      Worker deployment, origins, and rate limiter
-shared/catalog.ts     The single catalogue used by the frontend and API
-scripts/              Garment asset preparation
-```
-
-To add a garment, edit `shared/catalog.ts`, add a transparent front-view PNG under `frontend/public/images/`, and set its overlay anchors. `torsoLeft` and `torsoRight` define the source texture’s torso edges. `sleeve` selects long, short, or three-quarter articulation, and `sleeveBottom` marks the source cuff position. Prices are in INR. The current model tracks one person.
-
-The frontend uses the shared catalogue directly so free try-on works independently of the API. `/api/products` exposes the same data for integrations. Replace both with your inventory service when connecting a real store.
-
-## Optional Decart AI
-
-1. Copy `backend/.dev.vars.example` to `backend/.dev.vars`.
-2. Set `DECART_API_KEY` in that local file. Never add it to a `NEXT_PUBLIC_` variable.
-3. Restart `npm run dev`. The fitting room offers **Start live AI try-on** when the backend reports the key is configured.
-
-Only that explicit AI action sends video and garment references to Decart. A fresh restricted token is minted for each session. Sessions end after two minutes. Decart requires its own credits; free body overlays do not.
-
-## Checks and formatting
+## Validate changes
 
 ```sh
 npm run typecheck
 npm test
 npm run build
 npm run format:check
-npm run format
+node scripts/check-catalog.mjs
 ```
 
-Code uses two-space indentation, named components, focused hooks, and Prettier. The CI workflow runs formatting, TypeScript, tests, and production builds.
+The integration suite uses a real local D1 runtime to verify account sessions, validation, saved shopping data, order ownership, stock rollback, cancellation and duplicate submission handling.
 
-## Deploy
-
-Deploy `frontend/` to Vercel and `backend/` to Cloudflare Workers. See [the deployment guide](docs/DEPLOYMENT.md) for exact settings and the connection checklist. Free try-on works even while the optional API is not configured.
-
-See [asset credits](docs/ASSETS.md) for demo imagery and model sources.
+See [deployment instructions](docs/DEPLOYMENT.md) and [asset provenance](docs/ASSETS.md).

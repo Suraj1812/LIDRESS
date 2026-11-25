@@ -1,34 +1,28 @@
-/** The URL is public; the permanent Decart key belongs exclusively to the Worker. */
-export const API_URL =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '') ||
-  (process.env.NODE_ENV === 'development' ? 'http://localhost:8787' : '');
-
-interface TryOnCredential {
-  apiKey: string;
-  expiresAt: string;
-  model: 'lucy-vton-3.6';
-  maxSessionSeconds: number;
+export class ApiError extends Error {
+  constructor(
+    message: string,
+    public status: number,
+  ) {
+    super(message);
+    this.name = 'ApiError';
+  }
 }
 
-export async function requestTryOnCredential(): Promise<TryOnCredential> {
-  if (!API_URL) throw new Error('The optional AI backend is not configured.');
-  const response = await fetch(`${API_URL}/api/try-on/token`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    signal: AbortSignal.timeout(15_000),
+/** All browser requests stay on this origin; Next proxies them to Cloudflare. */
+export async function api<T>(path: string, options: RequestInit = {}): Promise<T> {
+  const response = await fetch(`/api${path}`, {
+    ...options,
+    headers: { 'Content-Type': 'application/json', ...options.headers },
+    credentials: 'same-origin',
+    signal: options.signal || AbortSignal.timeout(15000),
   });
-  const result = await response.json();
+  let result;
+  try {
+    result = await response.json();
+  } catch {
+    throw new ApiError('The shop is temporarily unavailable.', response.status);
+  }
   if (!response.ok)
-    throw new Error(result.error || 'Unable to connect to the fitting room.');
-  return result;
-}
-
-export async function getBackendStatus(): Promise<boolean> {
-  if (!API_URL) return false;
-  const response = await fetch(`${API_URL}/api/health`, {
-    signal: AbortSignal.timeout(5_000),
-  });
-  if (!response.ok) throw new Error('The fitting-room backend is unavailable.');
-  const result = await response.json();
-  return result.aiConfigured === true;
+    throw new ApiError(result.error || 'Please try again.', response.status);
+  return result as T;
 }

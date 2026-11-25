@@ -1,2 +1,2 @@
-# Copy to .dev.vars. Never commit the real key.
-DECART_API_KEY=
+# No external API key is required for the demo shop.
+# Local origins and development cookies are configured by npm run dev.

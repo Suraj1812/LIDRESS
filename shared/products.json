@@ -1,0 +1,3939 @@
+[
+  {
+    "id": 1,
+    "slug": "the-check-oxford",
+    "title": "The Check Oxford",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "Shirts",
+    "price": 1890,
+    "mrp": 2999,
+    "images": [
+      "/images/check-shirt.png",
+      "/products/1-detail-1.webp",
+      "/products/1-detail-2.webp",
+      "/products/1-detail-3.webp",
+      "/products/1-detail-4.webp",
+      "/products/1-detail-5.webp",
+      "/products/1-detail-6.webp"
+    ],
+    "color": "Blue & charcoal",
+    "rating": 4.2,
+    "ratingCount": 163,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Trending",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "the-graphic-crew",
+    "title": "The Graphic Crew",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "T-shirts",
+    "price": 1290,
+    "mrp": 1999,
+    "images": [
+      "/images/graphic-tee.png",
+      "/products/2-detail-1.webp",
+      "/products/2-detail-2.webp",
+      "/products/2-detail-3.webp",
+      "/products/2-detail-4.webp",
+      "/products/2-detail-5.webp",
+      "/products/2-detail-6.webp"
+    ],
+    "color": "Cloud white",
+    "rating": 4.2,
+    "ratingCount": 206,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Best value",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "the-everyday-henley",
+    "title": "The Everyday Henley",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "T-shirts",
+    "price": 1490,
+    "mrp": 2499,
+    "images": [
+      "/images/henley.png",
+      "/products/3-detail-1.webp",
+      "/products/3-detail-2.webp",
+      "/products/3-detail-3.webp",
+      "/products/3-detail-4.webp",
+      "/products/3-detail-5.webp",
+      "/products/3-detail-6.webp"
+    ],
+    "color": "Stone & charcoal",
+    "rating": 4.3,
+    "ratingCount": 249,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Bestseller",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "the-field-jacket",
+    "title": "The Field Jacket",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "Jackets",
+    "price": 3290,
+    "mrp": 4999,
+    "images": [
+      "/images/cotton-jacket.png",
+      "/products/4-detail-1.webp",
+      "/products/4-detail-2.webp",
+      "/products/4-detail-3.webp",
+      "/products/4-detail-4.webp",
+      "/products/4-detail-5.webp",
+      "/products/4-detail-6.webp"
+    ],
+    "color": "Desert tan",
+    "rating": 4.4,
+    "ratingCount": 292,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Trending",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "the-denim-trucker",
+    "title": "The Denim Trucker",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "Denim",
+    "price": 3490,
+    "mrp": 5499,
+    "images": [
+      "/images/denim-jacket.png",
+      "/products/5-detail-1.webp",
+      "/products/5-detail-2.webp",
+      "/products/5-detail-3.webp",
+      "/products/5-detail-4.webp",
+      "/products/5-detail-5.webp",
+      "/products/5-detail-6.webp"
+    ],
+    "color": "Washed indigo",
+    "rating": 4.4,
+    "ratingCount": 335,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Best value",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "the-weekend-plaid",
+    "title": "The Weekend Plaid",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "Shirts",
+    "price": 1990,
+    "mrp": 2999,
+    "images": [
+      "/images/plaid-shirt.png",
+      "/products/6-detail-1.webp",
+      "/products/6-detail-2.webp",
+      "/products/6-detail-3.webp",
+      "/products/6-detail-4.webp",
+      "/products/6-detail-5.webp",
+      "/products/6-detail-6.webp"
+    ],
+    "color": "Red plaid",
+    "rating": 4.5,
+    "ratingCount": 378,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Bestseller",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "the-summer-shirt",
+    "title": "The Summer Shirt",
+    "brand": "LIDRESS MEN",
+    "category": "fashion",
+    "type": "Shirts",
+    "price": 1690,
+    "mrp": 2499,
+    "images": [
+      "/images/summer-shirt.png",
+      "/products/7-detail-1.webp",
+      "/products/7-detail-2.webp",
+      "/products/7-detail-3.webp",
+      "/products/7-detail-4.webp",
+      "/products/7-detail-5.webp",
+      "/products/7-detail-6.webp"
+    ],
+    "color": "Everyday blue",
+    "rating": 4.6,
+    "ratingCount": 421,
+    "stock": 40,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "A considered everyday essential. Comfortable fabric, clean detailing, and an easy silhouette made for your daily wardrobe.",
+    "highlights": [
+      "Comfortable everyday fabric",
+      "Regular fit for easy movement",
+      "Designed for men",
+      "Machine wash cold, dry in shade"
+    ],
+    "specifications": {
+      "Ideal for": "Men",
+      "Fit": "Regular",
+      "Occasion": "Casual",
+      "Care": "Machine wash cold"
+    },
+    "badge": "Trending",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up",
+      "Full product detail"
+    ]
+  },
+  {
+    "id": 87,
+    "slug": "men-check-shirt",
+    "title": "Men Check Shirt",
+    "brand": "Urban Chic",
+    "category": "fashion",
+    "type": "Shirts",
+    "price": 2099,
+    "mrp": 3099,
+    "images": [
+      "/products/87.webp",
+      "/products/87-1.webp",
+      "/products/87-2.webp",
+      "/products/87-3.webp",
+      "/products/87-detail-1.webp",
+      "/products/87-detail-2.webp",
+      "/products/87-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1087,
+    "stock": 80,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.",
+    "highlights": [
+      "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern",
+      "No warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Urban Chic",
+      "Category": "Shirts",
+      "SKU": "MEN-URB-CHE-087",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 88,
+    "slug": "nike-air-jordan-1-red-and-black",
+    "title": "Nike Air Jordan 1 Red And Black",
+    "brand": "Nike",
+    "category": "footwear",
+    "type": "Sneakers",
+    "price": 11299,
+    "mrp": 16399,
+    "images": [
+      "/products/88.webp",
+      "/products/88-1.webp",
+      "/products/88-2.webp",
+      "/products/88-3.webp",
+      "/products/88-detail-1.webp",
+      "/products/88-detail-2.webp",
+      "/products/88-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.8,
+    "ratingCount": 1098,
+    "stock": 12,
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+    "highlights": [
+      "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes",
+      "1 year warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Nike",
+      "Category": "Sneakers",
+      "SKU": "MEN-NIK-NIK-088",
+      "Weight": "3 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 89,
+    "slug": "nike-baseball-cleats",
+    "title": "Nike Baseball Cleats",
+    "brand": "Nike",
+    "category": "footwear",
+    "type": "Sneakers",
+    "price": 5999,
+    "mrp": 8699,
+    "images": [
+      "/products/89.webp",
+      "/products/89-1.webp",
+      "/products/89-2.webp",
+      "/products/89-3.webp",
+      "/products/89-detail-1.webp",
+      "/products/89-detail-2.webp",
+      "/products/89-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 1109,
+    "stock": 12,
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.",
+    "highlights": [
+      "Nike Baseball Cleats are designed for maximum traction and performance on the baseball field",
+      "6 months warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Nike",
+      "Category": "Sneakers",
+      "SKU": "MEN-NIK-NIK-089",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 90,
+    "slug": "puma-future-rider-trainers",
+    "title": "Puma Future Rider Trainers",
+    "brand": "Puma",
+    "category": "footwear",
+    "type": "Sneakers",
+    "price": 6799,
+    "mrp": 9899,
+    "images": [
+      "/products/90.webp",
+      "/products/90-1.webp",
+      "/products/90-2.webp",
+      "/products/90-3.webp",
+      "/products/90-detail-1.webp",
+      "/products/90-detail-2.webp",
+      "/products/90-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.9,
+    "ratingCount": 1120,
+    "stock": 80,
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.",
+    "highlights": [
+      "The Puma Future Rider Trainers offer a blend of retro style and modern comfort",
+      "5 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Puma",
+      "Category": "Sneakers",
+      "SKU": "MEN-PUM-PUM-090",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 91,
+    "slug": "sports-sneakers-off-white-&-red",
+    "title": "Sports Sneakers Off White & Red",
+    "brand": "Off White",
+    "category": "footwear",
+    "type": "Sneakers",
+    "price": 8999,
+    "mrp": 13099,
+    "images": [
+      "/products/91.webp",
+      "/products/91-1.webp",
+      "/products/91-2.webp",
+      "/products/91-3.webp",
+      "/products/91-detail-1.webp",
+      "/products/91-detail-2.webp",
+      "/products/91-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.8,
+    "ratingCount": 1131,
+    "stock": 17,
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.",
+    "highlights": [
+      "The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts",
+      "1 week warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Off White",
+      "Category": "Sneakers",
+      "SKU": "MEN-OFF-SPO-091",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 92,
+    "slug": "sports-sneakers-off-white-red",
+    "title": "Sports Sneakers Off White Red",
+    "brand": "Off White",
+    "category": "footwear",
+    "type": "Sneakers",
+    "price": 8299,
+    "mrp": 12099,
+    "images": [
+      "/products/92.webp",
+      "/products/92-1.webp",
+      "/products/92-2.webp",
+      "/products/92-3.webp",
+      "/products/92-detail-1.webp",
+      "/products/92-detail-2.webp",
+      "/products/92-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.7,
+    "ratingCount": 1142,
+    "stock": 62,
+    "sizes": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "description": "Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.",
+    "highlights": [
+      "Another variant of the Sports Sneakers in Off White Red, featuring a unique design",
+      "3 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Off White",
+      "Category": "Sneakers",
+      "SKU": "MEN-OFF-SPO-092",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 93,
+    "slug": "brown-leather-belt-watch",
+    "title": "Brown Leather Belt Watch",
+    "brand": "Fashion Timepieces",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 6799,
+    "mrp": 9899,
+    "images": [
+      "/products/93.webp",
+      "/products/93-1.webp",
+      "/products/93-2.webp",
+      "/products/93-detail-1.webp",
+      "/products/93-detail-2.webp",
+      "/products/93-detail-3.webp",
+      "/products/93-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1153,
+    "stock": 32,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.",
+    "highlights": [
+      "The Brown Leather Belt Watch is a stylish timepiece with a classic design",
+      "1 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Fashion Timepieces",
+      "Category": "Analog watches",
+      "SKU": "MEN-FAS-BRO-093",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 94,
+    "slug": "longines-master-collection",
+    "title": "Longines Master Collection",
+    "brand": "Longines",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 15999,
+    "mrp": 23199,
+    "images": [
+      "/products/94.webp",
+      "/products/94-1.webp",
+      "/products/94-2.webp",
+      "/products/94-detail-1.webp",
+      "/products/94-detail-2.webp",
+      "/products/94-detail-3.webp",
+      "/products/94-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 1164,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship. With a timeless design, it's a symbol of luxury and sophistication.",
+    "highlights": [
+      "The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship",
+      "1 week warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Longines",
+      "Category": "Analog watches",
+      "SKU": "MEN-LON-LON-094",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 95,
+    "slug": "rolex-cellini-date-black-dial",
+    "title": "Rolex Cellini Date Black Dial",
+    "brand": "Rolex",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 15999,
+    "mrp": 23199,
+    "images": [
+      "/products/95.webp",
+      "/products/95-1.webp",
+      "/products/95-2.webp",
+      "/products/95-detail-1.webp",
+      "/products/95-detail-2.webp",
+      "/products/95-detail-3.webp",
+      "/products/95-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 5,
+    "ratingCount": 1175,
+    "stock": 40,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.",
+    "highlights": [
+      "The Rolex Cellini Date with Black Dial is a classic and prestigious watch",
+      "3 months warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Rolex",
+      "Category": "Analog watches",
+      "SKU": "MEN-ROL-ROL-095",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 96,
+    "slug": "rolex-cellini-moonphase",
+    "title": "Rolex Cellini Moonphase",
+    "brand": "Rolex",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 15999,
+    "mrp": 23199,
+    "images": [
+      "/products/96.webp",
+      "/products/96-1.webp",
+      "/products/96-2.webp",
+      "/products/96-detail-1.webp",
+      "/products/96-detail-2.webp",
+      "/products/96-detail-3.webp",
+      "/products/96-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1186,
+    "stock": 36,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design. It reflects Rolex's commitment to precision and elegance.",
+    "highlights": [
+      "The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design",
+      "6 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Rolex",
+      "Category": "Analog watches",
+      "SKU": "MEN-ROL-ROL-096",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 97,
+    "slug": "rolex-datejust",
+    "title": "Rolex Datejust",
+    "brand": "Rolex",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 15999,
+    "mrp": 23199,
+    "images": [
+      "/products/97.webp",
+      "/products/97-1.webp",
+      "/products/97-2.webp",
+      "/products/97-detail-1.webp",
+      "/products/97-detail-2.webp",
+      "/products/97-detail-3.webp",
+      "/products/97-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1197,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.",
+    "highlights": [
+      "The Rolex Datejust is an iconic and versatile timepiece with a date window",
+      "2 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Rolex",
+      "Category": "Analog watches",
+      "SKU": "MEN-ROL-ROL-097",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 98,
+    "slug": "rolex-submariner-watch",
+    "title": "Rolex Submariner Watch",
+    "brand": "Rolex",
+    "category": "watches",
+    "type": "Analog watches",
+    "price": 15999,
+    "mrp": 23199,
+    "images": [
+      "/products/98.webp",
+      "/products/98-1.webp",
+      "/products/98-2.webp",
+      "/products/98-detail-1.webp",
+      "/products/98-detail-2.webp",
+      "/products/98-detail-3.webp",
+      "/products/98-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1208,
+    "stock": 55,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.",
+    "highlights": [
+      "The Rolex Submariner is a legendary dive watch with a rich history",
+      "5 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Rolex",
+      "Category": "Analog watches",
+      "SKU": "MEN-ROL-ROL-098",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 154,
+    "slug": "black-sun-glasses",
+    "title": "Black Sun Glasses",
+    "brand": "Fashion Shades",
+    "category": "accessories",
+    "type": "Sunglasses",
+    "price": 2299,
+    "mrp": 3399,
+    "images": [
+      "/products/154.webp",
+      "/products/154-1.webp",
+      "/products/154-2.webp",
+      "/products/154-detail-1.webp",
+      "/products/154-detail-2.webp",
+      "/products/154-detail-3.webp",
+      "/products/154-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.4,
+    "ratingCount": 1824,
+    "stock": 60,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses. They provide both UV protection and a fashionable look.",
+    "highlights": [
+      "The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses",
+      "No warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Fashion Shades",
+      "Category": "Sunglasses",
+      "SKU": "SUN-FAS-BLA-154",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 155,
+    "slug": "classic-sun-glasses",
+    "title": "Classic Sun Glasses",
+    "brand": "Fashion Shades",
+    "category": "accessories",
+    "type": "Sunglasses",
+    "price": 1899,
+    "mrp": 2799,
+    "images": [
+      "/products/155.webp",
+      "/products/155-1.webp",
+      "/products/155-2.webp",
+      "/products/155-detail-1.webp",
+      "/products/155-detail-2.webp",
+      "/products/155-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 1835,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses. These sunglasses are versatile and suitable for various occasions.",
+    "highlights": [
+      "The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses",
+      "6 months warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Fashion Shades",
+      "Category": "Sunglasses",
+      "SKU": "SUN-FAS-CLA-155",
+      "Weight": "8 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 156,
+    "slug": "green-and-black-glasses",
+    "title": "Green and Black Glasses",
+    "brand": "Fashion Shades",
+    "category": "accessories",
+    "type": "Sunglasses",
+    "price": 2699,
+    "mrp": 3999,
+    "images": [
+      "/products/156.webp",
+      "/products/156-1.webp",
+      "/products/156-2.webp",
+      "/products/156-detail-1.webp",
+      "/products/156-detail-2.webp",
+      "/products/156-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.5,
+    "ratingCount": 1846,
+    "stock": 24,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection. They are both stylish and eye-catching.",
+    "highlights": [
+      "The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection",
+      "1 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Fashion Shades",
+      "Category": "Sunglasses",
+      "SKU": "SUN-FAS-GRE-156",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 157,
+    "slug": "party-glasses",
+    "title": "Party Glasses",
+    "brand": "Fashion Fun",
+    "category": "accessories",
+    "type": "Sunglasses",
+    "price": 1499,
+    "mrp": 2199,
+    "images": [
+      "/products/157.webp",
+      "/products/157-1.webp",
+      "/products/157-2.webp",
+      "/products/157-detail-1.webp",
+      "/products/157-detail-2.webp",
+      "/products/157-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1857,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Party Glasses are designed to add flair to your party outfit. With unique shapes or colorful frames, they're perfect for adding a playful touch to your look during celebrations.",
+    "highlights": [
+      "The Party Glasses are designed to add flair to your party outfit",
+      "3 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Fashion Fun",
+      "Category": "Sunglasses",
+      "SKU": "SUN-FAS-PAR-157",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 158,
+    "slug": "sunglasses",
+    "title": "Sunglasses",
+    "brand": "Fashion Shades",
+    "category": "accessories",
+    "type": "Sunglasses",
+    "price": 1799,
+    "mrp": 2699,
+    "images": [
+      "/products/158.webp",
+      "/products/158-1.webp",
+      "/products/158-2.webp",
+      "/products/158-detail-1.webp",
+      "/products/158-detail-2.webp",
+      "/products/158-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1868,
+    "stock": 27,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Sunglasses offer a classic and simple design with a focus on functionality. These sunglasses provide essential UV protection while maintaining a timeless look.",
+    "highlights": [
+      "The Sunglasses offer a classic and simple design with a focus on functionality",
+      "3 year warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Fashion Shades",
+      "Category": "Sunglasses",
+      "SKU": "SUN-FAS-SUN-158",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 99,
+    "slug": "amazon-echo-plus",
+    "title": "Amazon Echo Plus",
+    "brand": "Amazon",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 7499,
+    "mrp": 10899,
+    "images": [
+      "/products/99.webp",
+      "/products/99-1.webp",
+      "/products/99-detail-1.webp",
+      "/products/99-detail-2.webp",
+      "/products/99-detail-3.webp",
+      "/products/99-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 5,
+    "ratingCount": 1219,
+    "stock": 61,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+    "highlights": [
+      "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control",
+      "6 months warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Amazon",
+      "Category": "Accessories",
+      "SKU": "MOB-AMA-AMA-099",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 100,
+    "slug": "apple-airpods",
+    "title": "Apple Airpods",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 9799,
+    "mrp": 14299,
+    "images": [
+      "/products/100.webp",
+      "/products/100-1.webp",
+      "/products/100-2.webp",
+      "/products/100-detail-1.webp",
+      "/products/100-detail-2.webp",
+      "/products/100-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1230,
+    "stock": 67,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.",
+    "highlights": [
+      "The Apple Airpods offer a seamless wireless audio experience",
+      "3 year warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-100",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 101,
+    "slug": "apple-airpods-max-silver",
+    "title": "Apple AirPods Max Silver",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 41299,
+    "mrp": 59899,
+    "images": [
+      "/products/101.webp",
+      "/products/101-detail-1.webp",
+      "/products/101-detail-2.webp",
+      "/products/101-detail-3.webp",
+      "/products/101-detail-4.webp",
+      "/products/101-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1241,
+    "stock": 59,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.",
+    "highlights": [
+      "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation",
+      "No warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-101",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 102,
+    "slug": "apple-airpower-wireless-charger",
+    "title": "Apple Airpower Wireless Charger",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 5999,
+    "mrp": 8699,
+    "images": [
+      "/products/102.webp",
+      "/products/102-detail-1.webp",
+      "/products/102-detail-2.webp",
+      "/products/102-detail-3.webp",
+      "/products/102-detail-4.webp",
+      "/products/102-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1252,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly. Simply place your devices on the charging mat for effortless charging.",
+    "highlights": [
+      "The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly",
+      "2 year warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-102",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 103,
+    "slug": "apple-homepod-mini-cosmic-grey",
+    "title": "Apple HomePod Mini Cosmic Grey",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 7499,
+    "mrp": 10899,
+    "images": [
+      "/products/103.webp",
+      "/products/103-detail-1.webp",
+      "/products/103-detail-2.webp",
+      "/products/103-detail-3.webp",
+      "/products/103-detail-4.webp",
+      "/products/103-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.6,
+    "ratingCount": 1263,
+    "stock": 27,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.",
+    "highlights": [
+      "The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience",
+      "3 months warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-103",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 104,
+    "slug": "apple-iphone-charger",
+    "title": "Apple iPhone Charger",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 1499,
+    "mrp": 2199,
+    "images": [
+      "/products/104.webp",
+      "/products/104-1.webp",
+      "/products/104-detail-1.webp",
+      "/products/104-detail-2.webp",
+      "/products/104-detail-3.webp",
+      "/products/104-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1274,
+    "stock": 31,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.",
+    "highlights": [
+      "The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone",
+      "1 year warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-104",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 105,
+    "slug": "apple-magsafe-battery-pack",
+    "title": "Apple MagSafe Battery Pack",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 7499,
+    "mrp": 10899,
+    "images": [
+      "/products/105.webp",
+      "/products/105-1.webp",
+      "/products/105-detail-1.webp",
+      "/products/105-detail-2.webp",
+      "/products/105-detail-3.webp",
+      "/products/105-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1285,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.",
+    "highlights": [
+      "The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone",
+      "2 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-105",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 106,
+    "slug": "apple-watch-series-4-gold",
+    "title": "Apple Watch Series 4 Gold",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 26299,
+    "mrp": 38199,
+    "images": [
+      "/products/106.webp",
+      "/products/106-1.webp",
+      "/products/106-2.webp",
+      "/products/106-detail-1.webp",
+      "/products/106-detail-2.webp",
+      "/products/106-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1296,
+    "stock": 33,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.",
+    "highlights": [
+      "The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display",
+      "6 months warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "SKU": "MOB-APP-APP-106",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 107,
+    "slug": "beats-flex-wireless-earphones",
+    "title": "Beats Flex Wireless Earphones",
+    "brand": "Beats",
+    "category": "electronics",
+    "type": "Accessories",
+    "price": 3799,
+    "mrp": 5599,
+    "images": [
+      "/products/107.webp",
+      "/products/107-detail-1.webp",
+      "/products/107-detail-2.webp",
+      "/products/107-detail-3.webp",
+      "/products/107-detail-4.webp",
+      "/products/107-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1307,
+    "stock": 50,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.",
+    "highlights": [
+      "The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience",
+      "1 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Beats",
+      "Category": "Accessories",
+      "SKU": "MOB-BEA-BEA-107",
+      "Weight": "8 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 78,
+    "slug": "apple-macbook-pro-14-inch-space-grey",
+    "title": "Apple MacBook Pro 14 Inch Space Grey",
+    "brand": "Apple",
+    "category": "electronics",
+    "type": "Laptops",
+    "price": 149999,
+    "mrp": 217499,
+    "images": [
+      "/products/78.webp",
+      "/products/78-1.webp",
+      "/products/78-2.webp",
+      "/products/78-detail-1.webp",
+      "/products/78-detail-2.webp",
+      "/products/78-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 988,
+    "stock": 24,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+    "highlights": [
+      "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display",
+      "3 year warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Laptops",
+      "SKU": "LAP-APP-APP-078",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 79,
+    "slug": "asus-zenbook-pro-dual-screen-laptop",
+    "title": "Asus Zenbook Pro Dual Screen Laptop",
+    "brand": "Asus",
+    "category": "electronics",
+    "type": "Laptops",
+    "price": 134999,
+    "mrp": 195799,
+    "images": [
+      "/products/79.webp",
+      "/products/79-1.webp",
+      "/products/79-2.webp",
+      "/products/79-detail-1.webp",
+      "/products/79-detail-2.webp",
+      "/products/79-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4,
+    "ratingCount": 999,
+    "stock": 45,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+    "highlights": [
+      "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals",
+      "3 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Asus",
+      "Category": "Laptops",
+      "SKU": "LAP-ASU-ASU-079",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 80,
+    "slug": "huawei-matebook-x-pro",
+    "title": "Huawei Matebook X Pro",
+    "brand": "Huawei",
+    "category": "electronics",
+    "type": "Laptops",
+    "price": 104999,
+    "mrp": 152299,
+    "images": [
+      "/products/80.webp",
+      "/products/80-1.webp",
+      "/products/80-2.webp",
+      "/products/80-detail-1.webp",
+      "/products/80-detail-2.webp",
+      "/products/80-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 5,
+    "ratingCount": 1010,
+    "stock": 75,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.",
+    "highlights": [
+      "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go",
+      "No warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Huawei",
+      "Category": "Laptops",
+      "SKU": "LAP-HUA-HUA-080",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 81,
+    "slug": "lenovo-yoga-920",
+    "title": "Lenovo Yoga 920",
+    "brand": "Lenovo",
+    "category": "electronics",
+    "type": "Laptops",
+    "price": 82499,
+    "mrp": 119699,
+    "images": [
+      "/products/81.webp",
+      "/products/81-1.webp",
+      "/products/81-2.webp",
+      "/products/81-detail-1.webp",
+      "/products/81-detail-2.webp",
+      "/products/81-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1021,
+    "stock": 40,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+    "highlights": [
+      "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability",
+      "6 months warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Lenovo",
+      "Category": "Laptops",
+      "SKU": "LAP-LEN-LEN-081",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 82,
+    "slug": "new-dell-xps-13-9300-laptop",
+    "title": "New DELL XPS 13 9300 Laptop",
+    "brand": "Dell",
+    "category": "electronics",
+    "type": "Laptops",
+    "price": 112499,
+    "mrp": 163199,
+    "images": [
+      "/products/82.webp",
+      "/products/82-1.webp",
+      "/products/82-2.webp",
+      "/products/82-detail-1.webp",
+      "/products/82-detail-2.webp",
+      "/products/82-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1032,
+    "stock": 74,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+    "highlights": [
+      "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks",
+      "2 year warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Dell",
+      "Category": "Laptops",
+      "SKU": "LAP-DEL-DEL-082",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 121,
+    "slug": "iphone-5s",
+    "title": "iPhone 5s",
+    "brand": "Apple",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 14999,
+    "mrp": 21799,
+    "images": [
+      "/products/121.webp",
+      "/products/121-1.webp",
+      "/products/121-2.webp",
+      "/products/121-detail-1.webp",
+      "/products/121-detail-2.webp",
+      "/products/121-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1461,
+    "stock": 25,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+    "highlights": [
+      "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release",
+      "Lifetime warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Smartphones",
+      "SKU": "SMA-APP-IPH-121",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 122,
+    "slug": "iphone-6",
+    "title": "iPhone 6",
+    "brand": "Apple",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 22499,
+    "mrp": 32699,
+    "images": [
+      "/products/122.webp",
+      "/products/122-1.webp",
+      "/products/122-2.webp",
+      "/products/122-detail-1.webp",
+      "/products/122-detail-2.webp",
+      "/products/122-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1472,
+    "stock": 60,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.",
+    "highlights": [
+      "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance",
+      "1 month warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Smartphones",
+      "SKU": "SMA-APP-IPH-122",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 123,
+    "slug": "iphone-13-pro",
+    "title": "iPhone 13 Pro",
+    "brand": "Apple",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 82499,
+    "mrp": 119699,
+    "images": [
+      "/products/123.webp",
+      "/products/123-1.webp",
+      "/products/123-2.webp",
+      "/products/123-detail-1.webp",
+      "/products/123-detail-2.webp",
+      "/products/123-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.1,
+    "ratingCount": 1483,
+    "stock": 56,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+    "highlights": [
+      "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display",
+      "3 year warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Smartphones",
+      "SKU": "SMA-APP-IPH-123",
+      "Weight": "8 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 124,
+    "slug": "iphone-x",
+    "title": "iPhone X",
+    "brand": "Apple",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 67499,
+    "mrp": 97899,
+    "images": [
+      "/products/124.webp",
+      "/products/124-1.webp",
+      "/products/124-2.webp",
+      "/products/124-detail-1.webp",
+      "/products/124-detail-2.webp",
+      "/products/124-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1494,
+    "stock": 37,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+    "highlights": [
+      "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance",
+      "3 months warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Apple",
+      "Category": "Smartphones",
+      "SKU": "SMA-APP-IPH-124",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 125,
+    "slug": "oppo-a57",
+    "title": "Oppo A57",
+    "brand": "Oppo",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 18799,
+    "mrp": 27299,
+    "images": [
+      "/products/125.webp",
+      "/products/125-1.webp",
+      "/products/125-2.webp",
+      "/products/125-detail-1.webp",
+      "/products/125-detail-2.webp",
+      "/products/125-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 1505,
+    "stock": 19,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.",
+    "highlights": [
+      "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features",
+      "Lifetime warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Oppo",
+      "Category": "Smartphones",
+      "SKU": "SMA-OPP-OPP-125",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 126,
+    "slug": "oppo-f19-pro-plus",
+    "title": "Oppo F19 Pro Plus",
+    "brand": "Oppo",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 29999,
+    "mrp": 43499,
+    "images": [
+      "/products/126.webp",
+      "/products/126-1.webp",
+      "/products/126-2.webp",
+      "/products/126-detail-1.webp",
+      "/products/126-detail-2.webp",
+      "/products/126-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1516,
+    "stock": 78,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+    "highlights": [
+      "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities",
+      "3 year warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Oppo",
+      "Category": "Smartphones",
+      "SKU": "SMA-OPP-OPP-126",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 127,
+    "slug": "oppo-k1",
+    "title": "Oppo K1",
+    "brand": "Oppo",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 22499,
+    "mrp": 32699,
+    "images": [
+      "/products/127.webp",
+      "/products/127-1.webp",
+      "/products/127-2.webp",
+      "/products/127-3.webp",
+      "/products/127-detail-1.webp",
+      "/products/127-detail-2.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1527,
+    "stock": 55,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.",
+    "highlights": [
+      "The Oppo K1 series offers a range of smartphones with various features and specifications",
+      "1 month warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "Oppo",
+      "Category": "Smartphones",
+      "SKU": "SMA-OPP-OPP-127",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail"
+    ]
+  },
+  {
+    "id": 128,
+    "slug": "realme-c35",
+    "title": "Realme C35",
+    "brand": "Realme",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 11299,
+    "mrp": 16399,
+    "images": [
+      "/products/128.webp",
+      "/products/128-1.webp",
+      "/products/128-2.webp",
+      "/products/128-detail-1.webp",
+      "/products/128-detail-2.webp",
+      "/products/128-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.2,
+    "ratingCount": 1538,
+    "stock": 48,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.",
+    "highlights": [
+      "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use",
+      "3 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Realme",
+      "Category": "Smartphones",
+      "SKU": "SMA-REA-REA-128",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 129,
+    "slug": "realme-x",
+    "title": "Realme X",
+    "brand": "Realme",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 22499,
+    "mrp": 32699,
+    "images": [
+      "/products/129.webp",
+      "/products/129-1.webp",
+      "/products/129-2.webp",
+      "/products/129-detail-1.webp",
+      "/products/129-detail-2.webp",
+      "/products/129-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1549,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
+    "highlights": [
+      "The Realme X is a mid-range smartphone known for its sleek design and impressive display",
+      "1 month warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Realme",
+      "Category": "Smartphones",
+      "SKU": "SMA-REA-REA-129",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 130,
+    "slug": "realme-xt",
+    "title": "Realme XT",
+    "brand": "Realme",
+    "category": "mobiles",
+    "type": "Smartphones",
+    "price": 26299,
+    "mrp": 38199,
+    "images": [
+      "/products/130.webp",
+      "/products/130-1.webp",
+      "/products/130-2.webp",
+      "/products/130-detail-1.webp",
+      "/products/130-detail-2.webp",
+      "/products/130-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.6,
+    "ratingCount": 1560,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
+    "highlights": [
+      "The Realme XT is a feature-rich smartphone with a focus on camera technology",
+      "3 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Realme",
+      "Category": "Smartphones",
+      "SKU": "SMA-REA-REA-130",
+      "Weight": "3 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "annibale-colombo-bed",
+    "title": "Annibale Colombo Bed",
+    "brand": "Annibale Colombo",
+    "category": "home",
+    "type": "Furniture",
+    "price": 142499,
+    "mrp": 206699,
+    "images": [
+      "/products/11.webp",
+      "/products/11-1.webp",
+      "/products/11-2.webp",
+      "/products/11-detail-1.webp",
+      "/products/11-detail-2.webp",
+      "/products/11-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.8,
+    "ratingCount": 251,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
+    "highlights": [
+      "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom",
+      "1 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Annibale Colombo",
+      "Category": "Furniture",
+      "SKU": "FUR-ANN-ANN-011",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "annibale-colombo-sofa",
+    "title": "Annibale Colombo Sofa",
+    "brand": "Annibale Colombo",
+    "category": "home",
+    "type": "Furniture",
+    "price": 187499,
+    "mrp": 271899,
+    "images": [
+      "/products/12.webp",
+      "/products/12-1.webp",
+      "/products/12-2.webp",
+      "/products/12-detail-1.webp",
+      "/products/12-detail-2.webp",
+      "/products/12-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 262,
+    "stock": 60,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+    "highlights": [
+      "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room",
+      "Lifetime warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "Annibale Colombo",
+      "Category": "Furniture",
+      "SKU": "FUR-ANN-ANN-012",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "bedside-table-african-cherry",
+    "title": "Bedside Table African Cherry",
+    "brand": "Furniture Co.",
+    "category": "home",
+    "type": "Furniture",
+    "price": 22499,
+    "mrp": 32699,
+    "images": [
+      "/products/13.webp",
+      "/products/13-1.webp",
+      "/products/13-2.webp",
+      "/products/13-detail-1.webp",
+      "/products/13-detail-2.webp",
+      "/products/13-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 273,
+    "stock": 64,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
+    "highlights": [
+      "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance",
+      "5 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Furniture Co.",
+      "Category": "Furniture",
+      "SKU": "FUR-FUR-BED-013",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 14,
+    "slug": "knoll-saarinen-executive-conference-chair",
+    "title": "Knoll Saarinen Executive Conference Chair",
+    "brand": "Knoll",
+    "category": "home",
+    "type": "Furniture",
+    "price": 37499,
+    "mrp": 54399,
+    "images": [
+      "/products/14.webp",
+      "/products/14-1.webp",
+      "/products/14-2.webp",
+      "/products/14-detail-1.webp",
+      "/products/14-detail-2.webp",
+      "/products/14-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.9,
+    "ratingCount": 284,
+    "stock": 26,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.",
+    "highlights": [
+      "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design",
+      "2 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Knoll",
+      "Category": "Furniture",
+      "SKU": "FUR-KNO-KNO-014",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "wooden-bathroom-sink-with-mirror",
+    "title": "Wooden Bathroom Sink With Mirror",
+    "brand": "Bath Trends",
+    "category": "home",
+    "type": "Furniture",
+    "price": 59999,
+    "mrp": 86999,
+    "images": [
+      "/products/15.webp",
+      "/products/15-1.webp",
+      "/products/15-2.webp",
+      "/products/15-detail-1.webp",
+      "/products/15-detail-2.webp",
+      "/products/15-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 295,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.",
+    "highlights": [
+      "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror",
+      "3 year warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "Bath Trends",
+      "Category": "Furniture",
+      "SKU": "FUR-BAT-WOO-015",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 43,
+    "slug": "decoration-swing",
+    "title": "Decoration Swing",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Decor",
+    "price": 4499,
+    "mrp": 6599,
+    "images": [
+      "/products/43.webp",
+      "/products/43-1.webp",
+      "/products/43-2.webp",
+      "/products/43-detail-1.webp",
+      "/products/43-detail-2.webp",
+      "/products/43-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 603,
+    "stock": 47,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.",
+    "highlights": [
+      "The Decoration Swing is a charming addition to your home decor",
+      "1 week warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Decor",
+      "SKU": "HOM-BRD-DEC-043",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 44,
+    "slug": "family-tree-photo-frame",
+    "title": "Family Tree Photo Frame",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Decor",
+    "price": 2299,
+    "mrp": 3399,
+    "images": [
+      "/products/44.webp",
+      "/products/44-detail-1.webp",
+      "/products/44-detail-2.webp",
+      "/products/44-detail-3.webp",
+      "/products/44-detail-4.webp",
+      "/products/44-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.5,
+    "ratingCount": 614,
+    "stock": 77,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories. With multiple photo slots, it tells the story of your loved ones.",
+    "highlights": [
+      "The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories",
+      "1 month warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Decor",
+      "SKU": "HOM-BRD-FAM-044",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 45,
+    "slug": "house-showpiece-plant",
+    "title": "House Showpiece Plant",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Decor",
+    "price": 2999,
+    "mrp": 4399,
+    "images": [
+      "/products/45.webp",
+      "/products/45-1.webp",
+      "/products/45-2.webp",
+      "/products/45-detail-1.webp",
+      "/products/45-detail-2.webp",
+      "/products/45-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.7,
+    "ratingCount": 625,
+    "stock": 28,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance. It adds greenery and style to any space.",
+    "highlights": [
+      "The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance",
+      "1 year warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Decor",
+      "SKU": "HOM-BRD-HOU-045",
+      "Weight": "8 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 46,
+    "slug": "plant-pot",
+    "title": "Plant Pot",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Decor",
+    "price": 1199,
+    "mrp": 1799,
+    "images": [
+      "/products/46.webp",
+      "/products/46-1.webp",
+      "/products/46-2.webp",
+      "/products/46-3.webp",
+      "/products/46-detail-1.webp",
+      "/products/46-detail-2.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 636,
+    "stock": 59,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.",
+    "highlights": [
+      "The Plant Pot is a stylish container for your favorite plants",
+      "Lifetime warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Decor",
+      "SKU": "HOM-BRD-PLA-046",
+      "Weight": "9 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail"
+    ]
+  },
+  {
+    "id": 47,
+    "slug": "table-lamp",
+    "title": "Table Lamp",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Decor",
+    "price": 3799,
+    "mrp": 5599,
+    "images": [
+      "/products/47.webp",
+      "/products/47-detail-1.webp",
+      "/products/47-detail-2.webp",
+      "/products/47-detail-3.webp",
+      "/products/47-detail-4.webp",
+      "/products/47-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 647,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.",
+    "highlights": [
+      "The Table Lamp is a functional and decorative lighting solution for your living space",
+      "3 months warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Decor",
+      "SKU": "HOM-BRD-TAB-047",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 48,
+    "slug": "bamboo-spatula",
+    "title": "Bamboo Spatula",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 599,
+    "mrp": 899,
+    "images": [
+      "/products/48.webp",
+      "/products/48-detail-1.webp",
+      "/products/48-detail-2.webp",
+      "/products/48-detail-3.webp",
+      "/products/48-detail-4.webp",
+      "/products/48-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 658,
+    "stock": 37,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
+    "highlights": [
+      "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo",
+      "1 month warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-BAM-048",
+      "Weight": "3 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 49,
+    "slug": "black-aluminium-cup",
+    "title": "Black Aluminium Cup",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 499,
+    "mrp": 799,
+    "images": [
+      "/products/49.webp",
+      "/products/49-1.webp",
+      "/products/49-detail-1.webp",
+      "/products/49-detail-2.webp",
+      "/products/49-detail-3.webp",
+      "/products/49-detail-4.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.5,
+    "ratingCount": 669,
+    "stock": 75,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.",
+    "highlights": [
+      "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages",
+      "1 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-BLA-049",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail"
+    ]
+  },
+  {
+    "id": 50,
+    "slug": "black-whisk",
+    "title": "Black Whisk",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 799,
+    "mrp": 1199,
+    "images": [
+      "/products/50.webp",
+      "/products/50-detail-1.webp",
+      "/products/50-detail-2.webp",
+      "/products/50-detail-3.webp",
+      "/products/50-detail-4.webp",
+      "/products/50-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.9,
+    "ratingCount": 680,
+    "stock": 73,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+    "highlights": [
+      "The Black Whisk is a kitchen essential for whisking and beating ingredients",
+      "3 months warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-BLA-050",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 51,
+    "slug": "boxed-blender",
+    "title": "Boxed Blender",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 2999,
+    "mrp": 4399,
+    "images": [
+      "/products/51.webp",
+      "/products/51-1.webp",
+      "/products/51-2.webp",
+      "/products/51-3.webp",
+      "/products/51-detail-1.webp",
+      "/products/51-detail-2.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.6,
+    "ratingCount": 691,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
+    "highlights": [
+      "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more",
+      "5 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-BOX-051",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail"
+    ]
+  },
+  {
+    "id": 52,
+    "slug": "carbon-steel-wok",
+    "title": "Carbon Steel Wok",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 2299,
+    "mrp": 3399,
+    "images": [
+      "/products/52.webp",
+      "/products/52-detail-1.webp",
+      "/products/52-detail-2.webp",
+      "/products/52-detail-3.webp",
+      "/products/52-detail-4.webp",
+      "/products/52-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4,
+    "ratingCount": 702,
+    "stock": 40,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.",
+    "highlights": [
+      "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying",
+      "2 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-CAR-052",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 53,
+    "slug": "chopping-board",
+    "title": "Chopping Board",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 999,
+    "mrp": 1499,
+    "images": [
+      "/products/53.webp",
+      "/products/53-detail-1.webp",
+      "/products/53-detail-2.webp",
+      "/products/53-detail-3.webp",
+      "/products/53-detail-4.webp",
+      "/products/53-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 713,
+    "stock": 14,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.",
+    "highlights": [
+      "The Chopping Board is an essential kitchen accessory for food preparation",
+      "3 months warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-CHO-053",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 54,
+    "slug": "citrus-squeezer-yellow",
+    "title": "Citrus Squeezer Yellow",
+    "brand": "LIDRESS SELECT",
+    "category": "home",
+    "type": "Kitchen",
+    "price": 699,
+    "mrp": 1099,
+    "images": [
+      "/products/54.webp",
+      "/products/54-detail-1.webp",
+      "/products/54-detail-2.webp",
+      "/products/54-detail-3.webp",
+      "/products/54-detail-4.webp",
+      "/products/54-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.6,
+    "ratingCount": 724,
+    "stock": 22,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.",
+    "highlights": [
+      "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits",
+      "2 year warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Kitchen",
+      "SKU": "KIT-BRD-CIT-054",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 137,
+    "slug": "american-football",
+    "title": "American Football",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 1499,
+    "mrp": 2199,
+    "images": [
+      "/products/137.webp",
+      "/products/137-detail-1.webp",
+      "/products/137-detail-2.webp",
+      "/products/137-detail-3.webp",
+      "/products/137-detail-4.webp",
+      "/products/137-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.9,
+    "ratingCount": 1637,
+    "stock": 53,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The American Football is a classic ball used in American football games. It is designed for throwing and catching, making it an essential piece of equipment for the sport.",
+    "highlights": [
+      "The American Football is a classic ball used in American football games",
+      "6 months warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-AME-137",
+      "Weight": "2 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 138,
+    "slug": "baseball-ball",
+    "title": "Baseball Ball",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 699,
+    "mrp": 1099,
+    "images": [
+      "/products/138.webp",
+      "/products/138-detail-1.webp",
+      "/products/138-detail-2.webp",
+      "/products/138-detail-3.webp",
+      "/products/138-detail-4.webp",
+      "/products/138-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1648,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Baseball Ball is a standard baseball used in baseball games. It features a durable leather cover and is designed for pitching, hitting, and fielding in the game of baseball.",
+    "highlights": [
+      "The Baseball Ball is a standard baseball used in baseball games",
+      "6 months warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-BAS-138",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 139,
+    "slug": "baseball-glove",
+    "title": "Baseball Glove",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 1899,
+    "mrp": 2799,
+    "images": [
+      "/products/139.webp",
+      "/products/139-1.webp",
+      "/products/139-2.webp",
+      "/products/139-detail-1.webp",
+      "/products/139-detail-2.webp",
+      "/products/139-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4,
+    "ratingCount": 1659,
+    "stock": 22,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Baseball Glove is a protective glove worn by baseball players. It is designed to catch and field the baseball, providing players with comfort and control during the game.",
+    "highlights": [
+      "The Baseball Glove is a protective glove worn by baseball players",
+      "Lifetime warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-BAS-139",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 140,
+    "slug": "basketball",
+    "title": "Basketball",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 1199,
+    "mrp": 1799,
+    "images": [
+      "/products/140.webp",
+      "/products/140-detail-1.webp",
+      "/products/140-detail-2.webp",
+      "/products/140-detail-3.webp",
+      "/products/140-detail-4.webp",
+      "/products/140-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.7,
+    "ratingCount": 1670,
+    "stock": 75,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Basketball is a standard ball used in basketball games. It is designed for dribbling, shooting, and passing in the game of basketball, suitable for both indoor and outdoor play.",
+    "highlights": [
+      "The Basketball is a standard ball used in basketball games",
+      "1 year warranty",
+      "Ships in 1 week"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-BAS-140",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 141,
+    "slug": "basketball-rim",
+    "title": "Basketball Rim",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 2999,
+    "mrp": 4399,
+    "images": [
+      "/products/141.webp",
+      "/products/141-detail-1.webp",
+      "/products/141-detail-2.webp",
+      "/products/141-detail-3.webp",
+      "/products/141-detail-4.webp",
+      "/products/141-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.6,
+    "ratingCount": 1681,
+    "stock": 43,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Basketball Rim is a sturdy hoop and net assembly mounted on a basketball backboard. It provides a target for shooting and scoring in the game of basketball.",
+    "highlights": [
+      "The Basketball Rim is a sturdy hoop and net assembly mounted on a basketball backboard",
+      "3 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-BAS-141",
+      "Weight": "1 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 142,
+    "slug": "cricket-ball",
+    "title": "Cricket Ball",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 999,
+    "mrp": 1499,
+    "images": [
+      "/products/142.webp",
+      "/products/142-detail-1.webp",
+      "/products/142-detail-2.webp",
+      "/products/142-detail-3.webp",
+      "/products/142-detail-4.webp",
+      "/products/142-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1692,
+    "stock": 30,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Cricket Ball is a hard leather ball used in the sport of cricket. It is bowled and batted in the game, and its hardness and seam contribute to the dynamics of cricket play.",
+    "highlights": [
+      "The Cricket Ball is a hard leather ball used in the sport of cricket",
+      "3 year warranty",
+      "Ships in 3-5 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-CRI-142",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 143,
+    "slug": "cricket-bat",
+    "title": "Cricket Bat",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 2299,
+    "mrp": 3399,
+    "images": [
+      "/products/143.webp",
+      "/products/143-detail-1.webp",
+      "/products/143-detail-2.webp",
+      "/products/143-detail-3.webp",
+      "/products/143-detail-4.webp",
+      "/products/143-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1703,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball. It is made of wood and comes in various sizes and designs.",
+    "highlights": [
+      "The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball",
+      "1 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-CRI-143",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 144,
+    "slug": "cricket-helmet",
+    "title": "Cricket Helmet",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 3399,
+    "mrp": 4999,
+    "images": [
+      "/products/144.webp",
+      "/products/144-1.webp",
+      "/products/144-2.webp",
+      "/products/144-3.webp",
+      "/products/144-detail-1.webp",
+      "/products/144-detail-2.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.7,
+    "ratingCount": 1714,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Cricket Helmet is a protective headgear worn by cricket players, especially batsmen and wicketkeepers. It provides protection against fast bowling and bouncers.",
+    "highlights": [
+      "The Cricket Helmet is a protective headgear worn by cricket players, especially batsmen and wicketkeepers",
+      "Lifetime warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-CRI-144",
+      "Weight": "10 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Product photo 4",
+      "Upper detail",
+      "Lower detail"
+    ]
+  },
+  {
+    "id": 145,
+    "slug": "cricket-wicket",
+    "title": "Cricket Wicket",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 2299,
+    "mrp": 3399,
+    "images": [
+      "/products/145.webp",
+      "/products/145-detail-1.webp",
+      "/products/145-detail-2.webp",
+      "/products/145-detail-3.webp",
+      "/products/145-detail-4.webp",
+      "/products/145-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.7,
+    "ratingCount": 1725,
+    "stock": 25,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Cricket Wicket is a set of three stumps and two bails, forming a wicket used in the sport of cricket. Batsmen aim to protect the wicket while scoring runs.",
+    "highlights": [
+      "The Cricket Wicket is a set of three stumps and two bails, forming a wicket used in the sport of cricket",
+      "3 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-CRI-145",
+      "Weight": "5 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Top rated",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 146,
+    "slug": "feather-shuttlecock",
+    "title": "Feather Shuttlecock",
+    "brand": "LIDRESS SELECT",
+    "category": "sports",
+    "type": "Sports",
+    "price": 499,
+    "mrp": 799,
+    "images": [
+      "/products/146.webp",
+      "/products/146-detail-1.webp",
+      "/products/146-detail-2.webp",
+      "/products/146-detail-3.webp",
+      "/products/146-detail-4.webp",
+      "/products/146-detail-5.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 1736,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "The Feather Shuttlecock is used in the sport of badminton. It features natural feathers and is designed for high-speed play, providing stability and accuracy during matches.",
+    "highlights": [
+      "The Feather Shuttlecock is used in the sport of badminton",
+      "3 year warranty",
+      "Ships in 1-2 business days"
+    ],
+    "specifications": {
+      "Brand": "LIDRESS SELECT",
+      "Category": "Sports",
+      "SKU": "SPO-BRD-FEA-146",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Upper detail",
+      "Lower detail",
+      "Left detail",
+      "Right detail",
+      "Centre close-up"
+    ]
+  },
+  {
+    "id": 1006,
+    "slug": "calvin-klein-ck-one",
+    "title": "Calvin Klein CK One",
+    "brand": "Calvin Klein",
+    "category": "grooming",
+    "type": "Fragrances",
+    "price": 3799,
+    "mrp": 5599,
+    "images": [
+      "/products/1006.webp",
+      "/products/1006-1.webp",
+      "/products/1006-2.webp",
+      "/products/1006-detail-1.webp",
+      "/products/1006-detail-2.webp",
+      "/products/1006-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.4,
+    "ratingCount": 196,
+    "stock": 29,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+    "highlights": [
+      "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent",
+      "1 week warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Calvin Klein",
+      "Category": "Fragrances",
+      "SKU": "FRA-CAL-CAL-006",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 1007,
+    "slug": "chanel-coco-noir-eau-de",
+    "title": "Chanel Coco Noir Eau De",
+    "brand": "Chanel",
+    "category": "grooming",
+    "type": "Fragrances",
+    "price": 9799,
+    "mrp": 14299,
+    "images": [
+      "/products/1007.webp",
+      "/products/1007-1.webp",
+      "/products/1007-2.webp",
+      "/products/1007-detail-1.webp",
+      "/products/1007-detail-2.webp",
+      "/products/1007-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4.3,
+    "ratingCount": 207,
+    "stock": 58,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+    "highlights": [
+      "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood",
+      "3 year warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Chanel",
+      "Category": "Fragrances",
+      "SKU": "FRA-CHA-CHA-007",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "dior-j'adore",
+    "title": "Dior J'adore",
+    "brand": "Dior",
+    "category": "grooming",
+    "type": "Fragrances",
+    "price": 6799,
+    "mrp": 9899,
+    "images": [
+      "/products/8.webp",
+      "/products/8-1.webp",
+      "/products/8-2.webp",
+      "/products/8-detail-1.webp",
+      "/products/8-detail-2.webp",
+      "/products/8-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 218,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+    "highlights": [
+      "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine",
+      "1 week warranty",
+      "Ships in 2 weeks"
+    ],
+    "specifications": {
+      "Brand": "Dior",
+      "Category": "Fragrances",
+      "SKU": "FRA-DIO-DIO-008",
+      "Weight": "4 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "dolce-shine-eau-de",
+    "title": "Dolce Shine Eau de",
+    "brand": "Dolce & Gabbana",
+    "category": "grooming",
+    "type": "Fragrances",
+    "price": 5299,
+    "mrp": 7699,
+    "images": [
+      "/products/9.webp",
+      "/products/9-1.webp",
+      "/products/9-2.webp",
+      "/products/9-detail-1.webp",
+      "/products/9-detail-2.webp",
+      "/products/9-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 4,
+    "ratingCount": 229,
+    "stock": 12,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+    "highlights": [
+      "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods",
+      "3 year warranty",
+      "Ships in 1 month"
+    ],
+    "specifications": {
+      "Brand": "Dolce & Gabbana",
+      "Category": "Fragrances",
+      "SKU": "FRA-DOL-DOL-009",
+      "Weight": "6 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "gucci-bloom-eau-de",
+    "title": "Gucci Bloom Eau de",
+    "brand": "Gucci",
+    "category": "grooming",
+    "type": "Fragrances",
+    "price": 5999,
+    "mrp": 8699,
+    "images": [
+      "/products/10.webp",
+      "/products/10-1.webp",
+      "/products/10-2.webp",
+      "/products/10-detail-1.webp",
+      "/products/10-detail-2.webp",
+      "/products/10-detail-3.webp"
+    ],
+    "color": "As shown",
+    "rating": 3.8,
+    "ratingCount": 240,
+    "stock": 80,
+    "sizes": [
+      "Standard"
+    ],
+    "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+    "highlights": [
+      "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper",
+      "6 months warranty",
+      "Ships overnight"
+    ],
+    "specifications": {
+      "Brand": "Gucci",
+      "Category": "Fragrances",
+      "SKU": "FRA-GUC-GUC-010",
+      "Weight": "7 kg",
+      "Country of origin": "See manufacturer packaging"
+    },
+    "badge": "Special price",
+    "featured": true,
+    "imageLabels": [
+      "Main product photo",
+      "Product photo 2",
+      "Product photo 3",
+      "Upper detail",
+      "Lower detail",
+      "Left detail"
+    ]
+  }
+]

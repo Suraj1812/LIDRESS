@@ -1,154 +1,125 @@
-/** Demo men's catalogue. Images and prices are illustrative; checkout is not connected. */
+import catalog from './products.json';
+
 export interface Product {
   id: number;
-  name: string;
-  category: 'Shirts' | 'T-shirts' | 'Jackets' | 'Denim';
+  slug: string;
+  title: string;
+  brand: string;
+  category: string;
+  type: string;
   price: number;
-  image: string;
+  mrp: number;
+  images: string[];
+  imageLabels: string[];
   color: string;
-  swatches: string[];
-  tag: string;
-  desc: string;
-  prompt: string;
-  // Normalized texture cut lines for torso and articulated sleeve rendering.
-  overlay: {
-    torsoLeft: number;
-    torsoRight: number;
-    sleeve: 'long' | 'short' | 'three-quarter';
-    sleeveBottom: number;
-  };
+  rating: number;
+  ratingCount: number;
+  stock: number;
+  sizes: string[];
+  description: string;
+  highlights: string[];
+  specifications: Record<string, string>;
+  badge: string;
+  featured: boolean;
 }
 
-export const products: Product[] = [
+export const products: Product[] = catalog.map((product) => ({
+  ...product,
+  specifications: Object.fromEntries(
+    Object.entries(product.specifications).filter(
+      (entry): entry is [string, string] => typeof entry[1] === 'string',
+    ),
+  ),
+}));
+export const categories = [
+  { id: 'all', name: 'For you', image: '/products/100.webp', caption: 'Discover more' },
   {
-    id: 1,
-    name: 'The Check Oxford',
-    category: 'Shirts',
-    price: 1890,
+    id: 'fashion',
+    name: 'Men’s fashion',
     image: '/images/check-shirt.png',
-    color: 'Blue & charcoal',
-    swatches: ['#5c7d9d'],
-    tag: 'BESTSELLER',
-    desc: 'A crisp check. A relaxed kind of confidence.',
-    prompt: "a men's blue, charcoal and white checked long-sleeve button-up shirt",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'long',
-      sleeveBottom: 0.88,
-    },
+    caption: 'Everyday style',
   },
   {
-    id: 2,
-    name: 'The Graphic Crew',
-    category: 'T-shirts',
-    price: 1290,
-    image: '/images/graphic-tee.png',
-    color: 'Cloud white',
-    swatches: ['#eeede7'],
-    tag: 'NEW ARRIVAL',
-    desc: 'Easy cotton. A graphic with a little attitude.',
-    prompt: "a men's white short-sleeve crewneck T-shirt with a black bird graphic",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'short',
-      sleeveBottom: 0.4,
-    },
+    id: 'footwear',
+    name: 'Footwear',
+    image: '/products/88.webp',
+    caption: 'Find your stride',
   },
   {
-    id: 3,
-    name: 'The Everyday Henley',
-    category: 'T-shirts',
-    price: 1490,
-    image: '/images/henley.png',
-    color: 'Stone & charcoal',
-    swatches: ['#b8b7b1'],
-    tag: 'ESSENTIAL',
-    desc: 'The everyday tee, with a better neckline.',
-    prompt:
-      "a men's grey three-quarter-sleeve henley T-shirt with charcoal raglan sleeves",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'three-quarter',
-      sleeveBottom: 0.73,
-    },
+    id: 'watches',
+    name: 'Watches',
+    image: '/products/93.webp',
+    caption: 'Make time for style',
   },
   {
-    id: 4,
-    name: 'The Field Jacket',
-    category: 'Jackets',
-    price: 3290,
-    image: '/images/cotton-jacket.png',
-    color: 'Desert tan',
-    swatches: ['#8b8064'],
-    tag: 'THE EDIT',
-    desc: 'A considered layer for wherever the day goes.',
-    prompt: "a men's tan cotton field jacket with a front zip and flap pockets",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'long',
-      sleeveBottom: 0.98,
-    },
+    id: 'mobiles',
+    name: 'Mobiles',
+    image: '/products/123.webp',
+    caption: 'Stay connected',
   },
   {
-    id: 5,
-    name: 'The Denim Trucker',
-    category: 'Denim',
-    price: 3490,
-    image: '/images/denim-jacket.png',
-    color: 'Washed indigo',
-    swatches: ['#6b8fa6'],
-    tag: 'TIMELESS',
-    desc: 'The blue layer that earns its place in every wardrobe.',
-    prompt:
-      "a men's blue washed denim trucker jacket with metal buttons and chest pockets",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'long',
-      sleeveBottom: 0.98,
-    },
+    id: 'electronics',
+    name: 'Electronics',
+    image: '/products/100.webp',
+    caption: 'Upgrade your everyday',
   },
   {
-    id: 6,
-    name: 'The Weekend Plaid',
-    category: 'Shirts',
-    price: 1990,
-    image: '/images/plaid-shirt.png',
-    color: 'Red plaid',
-    swatches: ['#aa5447'],
-    tag: 'OFF DUTY',
-    desc: 'A soft plaid shirt for your unhurried days.',
-    prompt: "a men's red plaid long-sleeve button-up casual shirt",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'long',
-      sleeveBottom: 0.97,
-    },
+    id: 'home',
+    name: 'Home & living',
+    image: '/products/12.webp',
+    caption: 'Make room for good things',
   },
   {
-    id: 7,
-    name: 'The Summer Shirt',
-    category: 'Shirts',
-    price: 1690,
-    image: '/images/summer-shirt.png',
-    color: 'Everyday blue',
-    swatches: ['#738794'],
-    tag: 'EASY WEAR',
-    desc: 'Short sleeves. Long weekends. A lighter way to dress.',
-    prompt: "a men's blue short-sleeve collared casual shirt",
-    overlay: {
-      torsoLeft: 0.2,
-      torsoRight: 0.8,
-      sleeve: 'short',
-      sleeveBottom: 0.48,
-    },
+    id: 'accessories',
+    name: 'Accessories',
+    image: '/products/154.webp',
+    caption: 'The finishing touch',
+  },
+  { id: 'sports', name: 'Sports', image: '/products/137.webp', caption: 'Keep moving' },
+  {
+    id: 'grooming',
+    name: 'Grooming',
+    image: '/products/6.webp',
+    caption: 'Your daily essentials',
   },
 ];
+export const money = (amount: number) =>
+  new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(amount);
+export const discountPercent = (product: Pick<Product, 'price' | 'mrp'>) =>
+  Math.round((1 - product.price / product.mrp) * 100);
+export const getProduct = (id: number) => products.find((product) => product.id === id);
+export const FREE_DELIVERY_MINIMUM = 999;
+export const DELIVERY_FEE = 49;
 
-export type BagItem = { product: Product; size: string; qty: number };
-export const money = (amount: number) => `₹${amount.toLocaleString('en-IN')}`;
+export interface CartLine {
+  productId: number;
+  size: string;
+  quantity: number;
+}
+export function calculateTotals(items: CartLine[], coupon = '') {
+  const subtotal = items.reduce(
+    (sum, item) => sum + (getProduct(item.productId)?.price || 0) * item.quantity,
+    0,
+  );
+  const mrp = items.reduce(
+    (sum, item) => sum + (getProduct(item.productId)?.mrp || 0) * item.quantity,
+    0,
+  );
+  const couponDiscount =
+    coupon === 'WELCOME10' && subtotal >= 999
+      ? Math.min(500, Math.round(subtotal * 0.1))
+      : 0;
+  const shipping = subtotal === 0 || subtotal >= FREE_DELIVERY_MINIMUM ? 0 : DELIVERY_FEE;
+  return {
+    subtotal,
+    mrp,
+    savings: mrp - subtotal,
+    couponDiscount,
+    shipping,
+    total: subtotal - couponDiscount + shipping,
+  };
+}

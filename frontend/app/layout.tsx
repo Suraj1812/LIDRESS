@@ -1,14 +1,40 @@
 import type { Metadata } from 'next';
+import { metadataBase, pageMetadata, siteDescription } from '../lib/metadata';
+import { Providers } from '../components/commerce/providers';
+import { Header } from '../components/layout/header';
+import { Footer } from '../components/layout/footer';
+import { BrandIntro } from '../components/layout/brand-intro';
 import './globals.css';
 export const metadata: Metadata = {
-  title: 'LIDRESS — Your next look, on you.',
-  description:
-    'Discover considered essentials and step into your own virtual fitting room.',
+  metadataBase,
+  ...pageMetadata({
+    title: 'Find your everyday',
+    description: siteDescription,
+    path: '/',
+  }),
+  title: { default: 'LIDRESS — Find your everyday', template: '%s | LIDRESS' },
+  applicationName: 'LIDRESS',
+  icons: {
+    icon: [
+      { url: '/brand/favicon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/brand/favicon-48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/brand/lidress-icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          <BrandIntro />
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }

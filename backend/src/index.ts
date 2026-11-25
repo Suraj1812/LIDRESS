@@ -1,105 +1,97 @@
-import { createDecartClient } from '@decartai/sdk';
-import { products } from '../../shared/catalog';
-
-export interface Env {
-  DECART_API_KEY?: string;
-  ALLOWED_ORIGINS: string;
-  ENVIRONMENT: 'development' | 'production';
-  TOKEN_RATE_LIMITER: { limit(options: { key: string }): Promise<{ success: boolean }> };
-}
-
-const MODEL = 'lucy-vton-3.6';
-
-/** Keep CORS explicit: preview deployments must be added individually. */
-function allowedOrigins(env: Env): string[] {
-  return env.ALLOWED_ORIGINS.split(',')
-    .map((origin) => origin.trim())
-    .filter(Boolean);
-}
-
-export async function handleRequest(request: Request, env: Env): Promise<Response> {
-  const url = new URL(request.url);
-  const origin = request.headers.get('Origin');
-  const origins = allowedOrigins(env);
-  const isAllowedOrigin = origin !== null && origins.includes(origin);
-  const headers = new Headers({
-    'Content-Type': 'application/json; charset=utf-8',
-    'Cache-Control': 'no-store',
-    'X-Content-Type-Options': 'nosniff',
-    Vary: 'Origin',
-  });
-
-  if (isAllowedOrigin) {
-    headers.set('Access-Control-Allow-Origin', origin);
-    headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    headers.set('Access-Control-Allow-Headers', 'Content-Type');
-    headers.set('Access-Control-Max-Age', '86400');
-  }
-  const json = (body: unknown, status = 200) =>
-    new Response(JSON.stringify(body), { status, headers });
-
-  if (origin && !isAllowedOrigin) return json({ error: 'Origin is not allowed.' }, 403);
-  if (request.method === 'OPTIONS') {
-    return isAllowedOrigin
-      ? new Response(null, { status: 204, headers })
-      : json({ error: 'Origin is required.' }, 403);
-  }
-  if (url.pathname === '/api/health' && request.method === 'GET') {
-    return json({
-      status: 'ok',
-      service: 'lidress-api',
-      aiConfigured: Boolean(env.DECART_API_KEY),
-    });
-  }
-  if (url.pathname === '/api/products' && request.method === 'GET') {
-    return json({ products });
-  }
-  if (url.pathname !== '/api/try-on/token') return json({ error: 'Not found.' }, 404);
-  if (request.method !== 'POST')
-    return json({ error: 'Use POST for this endpoint.' }, 405);
-  if (!isAllowedOrigin) return json({ error: 'Origin is required.' }, 403);
-
-  if (!env.DECART_API_KEY) {
-    return json(
-      { error: 'AI try-on is not configured yet. Camera preview is still available.' },
-      503,
-    );
-  }
-  const ip = request.headers.get('CF-Connecting-IP');
-  // Cloudflare supplies this header in production; local development uses one shared bucket.
-  if (!ip && env.ENVIRONMENT === 'production')
-    return json({ error: 'Unable to identify request.' }, 403);
-  const { success } = await env.TOKEN_RATE_LIMITER.limit({
-    key: `try-on:${ip || 'local'}`,
-  });
-  if (!success) {
-    headers.set('Retry-After', '60');
-    return json(
-      { error: 'Please wait a minute before starting another AI session.' },
-      429,
-    );
-  }
+import { Hono } from 'hono';
+import { cors } from 'hono/cors';
+import { bodyLimit } from 'hono/body-limit';
+import { HTTPException } from 'hono/http-exception';
+import { loadUser } from './auth';
+import { authRoutes } from './routes/auth';
+import { catalogRoutes } from './routes/catalog';
+import { accountRoutes } from './routes/account';
+import { orderRoutes } from './routes/orders';
+import type { AppEnv, Env } from './types';
+export type { Env } from './types';
+const app = new Hono<AppEnv>();
+app.use('*', async (context, next) => {
+  context.header('Cache-Control', 'no-store');
+  context.header('X-Content-Type-Options', 'nosniff');
+  const origin = context.req.header('Origin');
+  const allowed = context.env.ALLOWED_ORIGINS.split(',').map((value: string) =>
+    value.trim(),
+  );
+  if (origin && !allowed.includes(origin))
+    return context.json({ error: 'Origin is not allowed.' }, 403);
+  if (!['GET', 'HEAD', 'OPTIONS'].includes(context.req.method) && !origin)
+    return context.json({ error: 'Origin is required.' }, 403);
+  await next();
+});
+app.use(
+  '*',
+  cors({
+    origin: (origin, context) =>
+      context.env.ALLOWED_ORIGINS.split(',')
+        .map((value: string) => value.trim())
+        .includes(origin)
+        ? origin
+        : '',
+    credentials: true,
+    allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowHeaders: ['Content-Type'],
+    maxAge: 86400,
+  }),
+);
+app.use(
+  '*',
+  bodyLimit({
+    maxSize: 32 * 1024,
+    onError: (context) => context.json({ error: 'Request is too large.' }, 413),
+  }),
+);
+app.get('/api/health', async (context) => {
   try {
-    const client = createDecartClient({ apiKey: env.DECART_API_KEY });
-    const token = await client.tokens.create({
-      expiresIn: 60,
-      allowedModels: [MODEL],
-      allowedOrigins: [origin],
-      constraints: { realtime: { maxSessionDuration: 120 } },
-    });
-    return json({
-      apiKey: token.apiKey,
-      expiresAt: token.expiresAt,
-      model: MODEL,
-      maxSessionSeconds: 120,
+    await context.env.DB.prepare('SELECT 1 FROM users LIMIT 1').first();
+    return context.json({
+      status: 'ok',
+      service: 'lidress-commerce',
+      database: 'connected',
+      mode: 'demo',
     });
   } catch {
-    // Never send upstream credentials or verbose provider errors to the browser/logs.
-    return json(
-      { error: 'The AI service could not start a session. Please try again.' },
-      502,
-    );
+    return context.json({ status: 'initializing', service: 'lidress-commerce' }, 503);
   }
-}
-
-export default { fetch: handleRequest } satisfies ExportedHandler<Env>;
+});
+app.use('/api/*', loadUser);
+app.route('/api/auth', authRoutes);
+app.route('/api/products', catalogRoutes);
+app.route('/api/account', accountRoutes);
+app.route('/api/orders', orderRoutes);
+app.get('/api/delivery/:pincode', (context) => {
+  const pincode = context.req.param('pincode');
+  if (!/^[1-9]\d{5}$/.test(pincode))
+    return context.json({ error: 'Enter a valid six-digit PIN code.' }, 400);
+  const cities: Record<string, string> = {
+    '11': 'New Delhi',
+    '12': 'Gurugram / Faridabad',
+    '20': 'Uttar Pradesh',
+    '40': 'Mumbai',
+    '41': 'Pune',
+    '50': 'Hyderabad',
+    '56': 'Bengaluru',
+    '60': 'Chennai',
+    '70': 'Kolkata',
+    '30': 'Rajasthan',
+    '38': 'Ahmedabad',
+  };
+  return context.json({
+    pincode,
+    city: cities[pincode.slice(0, 2)] || 'Your location',
+    estimate: '3–5 business days',
+    demo: true,
+  });
+});
+app.notFound((context) => context.json({ error: 'Not found.' }, 404));
+app.onError((error, context) =>
+  error instanceof HTTPException
+    ? context.json({ error: error.message }, error.status)
+    : context.json({ error: 'Something went wrong. Please try again.' }, 500),
+);
+export const handleRequest = (request: Request, env: Env) => app.fetch(request, env);
+export default app;
