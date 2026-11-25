@@ -37,13 +37,4 @@ export function ErrorState({ message, retry }: { message: string; retry?: () => 
     </div>
   );
 }
-export function ProductSkeleton() {
-  return (
-    <div className="product-skeleton" aria-label="Loading product">
-      <div />
-      <span />
-      <span />
-      <span />
-    </div>
-  );
-}
+export { ProductSkeleton } from './skeletons';

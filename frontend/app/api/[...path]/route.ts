@@ -8,7 +8,7 @@ async function proxy(request: NextRequest) {
     (process.env.NODE_ENV === 'development' ? 'http://localhost:8787' : '');
   if (!upstream)
     return Response.json({ error: 'The shop API is not configured.' }, { status: 503 });
-  const origin = new URL(request.url).origin;
+  const origin = `${request.nextUrl.protocol}//${request.headers.get('host') || request.nextUrl.host}`;
   const incomingOrigin = request.headers.get('origin');
   if (incomingOrigin && incomingOrigin !== origin)
     return Response.json({ error: 'Origin is not allowed.' }, { status: 403 });

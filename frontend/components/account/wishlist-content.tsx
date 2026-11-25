@@ -1,14 +1,15 @@
 'use client';
+import { WishlistSkeleton } from '../commerce/skeletons';
 import { products } from '../../../shared/catalog';
 import { useShop } from '../../lib/store';
-import { useHydrated } from '../../hooks/use-hydrated';
+import { useShoppingReady } from '../../hooks/use-shopping-ready';
 import { ProductCard } from '../catalog/product-card';
 import { EmptyState } from '../commerce/states';
 export function WishlistContent() {
   const ids = useShop((s) => s.wishlist);
-  const hydrated = useHydrated();
+  const hydrated = useShoppingReady();
   const saved = products.filter((p) => ids.includes(p.id));
-  if (!hydrated) return <div className="page-loading">Loading your favourites…</div>;
+  if (!hydrated) return <WishlistSkeleton />;
   return (
     <main className="page-container">
       <div className="page-heading">

@@ -1,3 +1,4 @@
+import { CatalogSkeleton } from '../../components/commerce/skeletons';
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { categories } from '../../../shared/catalog';
@@ -31,7 +32,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="page-loading">Finding good things for you…</div>}>
+    <Suspense fallback={<CatalogSkeleton />}>
       <CatalogBrowser />
     </Suspense>
   );

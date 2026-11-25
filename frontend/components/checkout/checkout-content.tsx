@@ -1,4 +1,5 @@
 'use client';
+import { CheckoutSkeleton } from '../commerce/skeletons';
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
@@ -9,63 +10,17 @@ import { addressSchema, type AddressInput, type Order } from '../../../shared/sc
 import { getProduct, type CartLine } from '../../../shared/catalog';
 import { useShop } from '../../lib/store';
 import { useSession } from '../../hooks/use-session';
-import { useHydrated } from '../../hooks/use-hydrated';
+import { useShoppingReady } from '../../hooks/use-shopping-ready';
 import { api } from '../../lib/api';
+import { AddressFields } from './address-fields';
 import { PriceSummary } from './cart-content';
 import { EmptyState } from '../commerce/states';
-export function AddressFields({
-  form,
-}: {
-  form: ReturnType<typeof useForm<AddressInput>>;
-}) {
-  return (
-    <div className="address-fields">
-      {(['name', 'phone', 'pincode', 'line1', 'locality', 'city', 'state'] as const).map(
-        (field) => (
-          <label key={field} className={field === 'line1' ? 'wide' : ''}>
-            {
-              {
-                name: 'Full name',
-                phone: 'Mobile number',
-                pincode: 'PIN code',
-                line1: 'House, building and street',
-                locality: 'Locality (optional)',
-                city: 'City',
-                state: 'State',
-              }[field]
-            }
-            <input
-              {...form.register(field)}
-              autoComplete={
-                field === 'name'
-                  ? 'name'
-                  : field === 'phone'
-                    ? 'tel'
-                    : field === 'pincode'
-                      ? 'postal-code'
-                      : field === 'line1'
-                        ? 'street-address'
-                        : 'off'
-              }
-              inputMode={field === 'phone' || field === 'pincode' ? 'numeric' : 'text'}
-            />
-            {form.formState.errors[field] && (
-              <small className="field-error">
-                {form.formState.errors[field]?.message}
-              </small>
-            )}
-          </label>
-        ),
-      )}
-    </div>
-  );
-}
 export function CheckoutContent() {
   const params = useSearchParams();
   const router = useRouter();
   const client = useQueryClient();
   const { data: session, isPending } = useSession();
-  const hydrated = useHydrated();
+  const hydrated = useShoppingReady();
   const cart = useShop((s) => s.cart);
   const [idempotencyKey] = useState(() => crypto.randomUUID());
   const form = useForm<AddressInput>({
@@ -99,8 +54,7 @@ export function CheckoutContent() {
       router.replace(`/orders/${order.id}?placed=1`);
     },
   });
-  if (!hydrated || isPending)
-    return <div className="page-loading">Preparing your checkout…</div>;
+  if (!hydrated || isPending) return <CheckoutSkeleton />;
   if (!items.length)
     return (
       <EmptyState

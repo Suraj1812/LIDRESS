@@ -1,79 +1,84 @@
 import Link from 'next/link';
-import { ShoppingBag, ShieldCheck, Truck, RotateCcw, Store } from 'lucide-react';
+import { ArrowUpRight, Compass, Headphones, Package, Store } from 'lucide-react';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
+const groups = [
+  {
+    title: 'Shop',
+    icon: Compass,
+    links: [
+      ['Men’s fashion', '/search?category=fashion'],
+      ['Electronics', '/search?category=electronics'],
+      ['Home & living', '/search?category=home'],
+      ['All deals', '/search?sort=discount'],
+    ],
+  },
+  {
+    title: 'Your account',
+    icon: Package,
+    links: [
+      ['My account', '/account'],
+      ['Orders', '/orders'],
+      ['Wishlist', '/wishlist'],
+      ['Shopping bag', '/cart'],
+    ],
+  },
+  {
+    title: 'Support',
+    icon: Headphones,
+    links: [
+      ['Help centre', '/help'],
+      ['Delivery', '/help#delivery'],
+      ['Returns', '/help#returns'],
+      ['Privacy', '/help#privacy'],
+    ],
+  },
+];
+const shortcuts = ['Watches', 'Mobiles', 'Footwear', 'Accessories', 'Sports', 'Grooming'];
+
 export function Footer() {
   return (
-    <>
-      <section className="trust-strip">
-        <div>
-          <Truck />
-          <span>
-            <strong>Delivery made simple</strong>Clear estimates. No surprises.
-          </span>
-        </div>
-        <div>
-          <RotateCcw />
-          <span>
-            <strong>Shop with confidence</strong>Helpful product information.
-          </span>
-        </div>
-        <div>
-          <ShieldCheck />
-          <span>
-            <strong>Your account, protected</strong>Secure sign-in and saved details.
-          </span>
-        </div>
-        <div>
-          <ShoppingBag />
-          <span>
-            <strong>More ways to discover</strong>80 products. 500 clear images.
-          </span>
-        </div>
-      </section>
-      <footer className="site-footer">
-        <div className="footer-top">
-          <div className="footer-brand">
-            <img src="/brand/lidress-wordmark.png" alt="lidress" />
-            <p>
-              Good finds for your everyday.
-              <br />A little more choice. A little more you.
-            </p>
-            <span className="footer-demo">A working demo marketplace</span>
-          </div>
-          <div>
-            <h3>Discover</h3>
-            <Link href="/search?category=fashion">Men’s fashion</Link>
-            <Link href="/search?category=electronics">Electronics</Link>
-            <Link href="/search?category=home">Home & living</Link>
-            <Link href="/search?sort=discount">Offers & deals</Link>
-          </div>
-          <div>
-            <h3>Your LIDRESS</h3>
-            <Link href="/account">My account</Link>
-            <Link href="/orders">My orders</Link>
-            <Link href="/wishlist">Wishlist</Link>
-            <Link href="/cart">Shopping bag</Link>
-          </div>
-          <div>
-            <h3>Here to help</h3>
-            <Link href="/help">Help centre</Link>
-            <Link href="/help#delivery">Delivery information</Link>
-            <Link href="/help#returns">Returns & cancellations</Link>
-            <Link href="/help#privacy">Privacy & account data</Link>
-            <Link href="/sell">Become a seller</Link>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} LIDRESS</span>
-          <p>
-            Demo catalogue, prices and ratings. No affiliation with the brands shown.
-            Orders are simulations.
-          </p>
-          <Link href="/sell">
-            <Store size={15} />
-            Sell on LIDRESS
+    <footer className="site-footer compact-footer">
+      <div className="footer-top">
+        <div className="footer-brand">
+          <Link href="/" aria-label="LIDRESS home">
+            <ProgressiveImage src="/brand/lidress-wordmark.png" alt="lidress" />
+          </Link>
+          <Link className="footer-help-button" href="/help">
+            <Headphones size={17} /> Get help <ArrowUpRight size={15} />
           </Link>
         </div>
-      </footer>
-    </>
+        {groups.map(({ title, icon: Icon, links }) => (
+          <nav key={title} aria-label={title}>
+            <h3>
+              <Icon size={17} />
+              {title}
+            </h3>
+            <div className="footer-link-grid">
+              {links.map(([label, href]) => (
+                <Link key={href} href={href}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        ))}
+      </div>
+      <div className="footer-shortcuts" aria-label="More categories">
+        {shortcuts.map((label) => (
+          <Link key={label} href={`/search?category=${label.toLowerCase()}`}>
+            {label}
+            <ArrowUpRight size={12} />
+          </Link>
+        ))}
+      </div>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} LIDRESS</span>
+        <p>Demo store · Sample prices and ratings · No payments or shipping.</p>
+        <Link href="/sell">
+          <Store size={15} /> Become a seller
+        </Link>
+      </div>
+    </footer>
   );
 }

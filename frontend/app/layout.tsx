@@ -5,6 +5,7 @@ import { Header } from '../components/layout/header';
 import { Footer } from '../components/layout/footer';
 import { BrandIntro } from '../components/layout/brand-intro';
 import './globals.css';
+import '../components/commerce/skeletons.css';
 export const metadata: Metadata = {
   metadataBase,
   ...pageMetadata({

@@ -1,4 +1,6 @@
 'use client';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -68,23 +70,16 @@ export function Header() {
   }
   return (
     <>
-      <div className="utility-bar">
-        <div>
-          <span>Good finds. Great everyday prices.</span>
-          <span className="demo-label">Demo marketplace · no real payments</span>
-        </div>
-        <Link href="/help">Help centre</Link>
-      </div>
       <header className="site-header">
         <div className="header-inner">
           <Link className="brand" href="/" aria-label="LIDRESS home">
-            <img
+            <ProgressiveImage
               src="/brand/lidress-wordmark.png"
+              loading="eager"
               width="162"
               height="50"
               alt="lidress"
             />
-            <span>find your everyday</span>
           </Link>
           <button className="delivery-location" onClick={() => openLocation()}>
             <MapPin size={19} />
@@ -128,7 +123,7 @@ export function Header() {
                       setQuery('');
                     }}
                   >
-                    <img src={product.images[0]} alt="" />
+                    <ProgressiveImage src={product.images[0]} alt="" />
                     <div>
                       {product.title}
                       <small>{product.brand}</small>

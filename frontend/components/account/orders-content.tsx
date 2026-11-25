@@ -1,4 +1,7 @@
 'use client';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
+import { OrdersSkeleton, OrderCardsSkeleton } from '../commerce/skeletons';
 import Link from 'next/link';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { format } from 'date-fns';
@@ -29,7 +32,7 @@ export function OrdersContent({ id }: { id?: string }) {
       toast.success('Demo order cancelled');
     },
   });
-  if (sessionPending) return <div className="page-loading">Loading your orders…</div>;
+  if (sessionPending) return <OrdersSkeleton detail={!!id} />;
   if (!user)
     return (
       <main className="page-container">
@@ -55,7 +58,7 @@ export function OrdersContent({ id }: { id?: string }) {
         </Link>
       </div>
       {query.isPending ? (
-        <div className="page-loading">Loading orders…</div>
+        <OrderCardsSkeleton detail={!!id} />
       ) : query.isError ? (
         <ErrorState message={query.error.message} retry={() => query.refetch()} />
       ) : !query.data?.length ? (
@@ -82,7 +85,7 @@ export function OrdersContent({ id }: { id?: string }) {
                   href={`/products/${item.productId}`}
                   key={`${item.productId}-${item.size}`}
                 >
-                  <img src={item.image} alt={item.title} />
+                  <ProgressiveImage src={item.image} alt={item.title} />
                   <div>
                     <h3>{item.title}</h3>
                     <p>

@@ -1,4 +1,6 @@
 'use client';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -153,7 +155,7 @@ export function AuthDialog() {
       className="auth-dialog"
     >
       <div className="auth-brand">
-        <img src="/brand/lidress-wordmark.png" alt="lidress" />
+        <ProgressiveImage src="/brand/lidress-wordmark.png" alt="lidress" />
         <div>
           <ShoppingBag size={48} strokeWidth={1} />
           <h3>

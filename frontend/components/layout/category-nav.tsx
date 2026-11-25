@@ -1,3 +1,4 @@
+import { ProgressiveImage } from '../commerce/progressive-image';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import { categories } from '../../../shared/catalog';
@@ -14,7 +15,7 @@ export function CategoryNav({ compact = false }: { compact?: boolean }) {
         >
           {!compact && (
             <span className="category-image">
-              <img src={category.image} alt="" />
+              <ProgressiveImage src={category.image} alt="" />
             </span>
           )}
           <span>

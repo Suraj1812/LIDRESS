@@ -24,6 +24,7 @@
     {
       "binding": "DB",
       "database_name": "lidress-commerce",
+      "database_id": "a325deaa-8657-4683-b952-a055844b630a",
       "migrations_dir": "migrations",
     },
   ],

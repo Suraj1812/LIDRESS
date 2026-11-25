@@ -4,6 +4,12 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import { getProduct, type CartLine } from '../../shared/catalog';
 
 interface ShopStore {
+  accountSyncUser: string | null;
+  accountSyncStatus: 'idle' | 'loading' | 'ready' | 'error';
+  setAccountSync: (
+    user: string | null,
+    status: 'idle' | 'loading' | 'ready' | 'error',
+  ) => void;
   cart: CartLine[];
   wishlist: number[];
   cartOwner: string | null;
@@ -29,6 +35,10 @@ interface ShopStore {
 export const useShop = create<ShopStore>()(
   persist(
     (set, get) => ({
+      accountSyncUser: null,
+      accountSyncStatus: 'idle',
+      setAccountSync: (accountSyncUser, accountSyncStatus) =>
+        set({ accountSyncUser, accountSyncStatus }),
       cart: [],
       wishlist: [],
       cartOwner: null,

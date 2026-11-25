@@ -1,4 +1,5 @@
 'use client';
+import { ProductGridSkeleton, SkeletonBlock } from '../commerce/skeletons';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
@@ -7,7 +8,7 @@ import { ChevronRight, SlidersHorizontal, X, Filter } from 'lucide-react';
 import { products, categories, type Product } from '../../../shared/catalog';
 import { api } from '../../lib/api';
 import { ProductCard } from './product-card';
-import { EmptyState, ErrorState, ProductSkeleton } from '../commerce/states';
+import { EmptyState, ErrorState } from '../commerce/states';
 import { CategoryNav } from '../layout/category-nav';
 
 export function CatalogBrowser() {
@@ -31,15 +32,16 @@ export function CatalogBrowser() {
         .map((product) => product.brand),
     ),
   ).sort();
-  const { data, isPending, isError, error, refetch, isFetching } = useQuery({
-    queryKey: ['catalog', params.toString()],
-    queryFn: () =>
-      api<{ products: Product[]; total: number; page: number; pages: number }>(
-        `/products?${params.toString()}`,
-      ),
-    placeholderData: keepPreviousData,
-    staleTime: 30000,
-  });
+  const { data, isPending, isError, error, refetch, isFetching, isPlaceholderData } =
+    useQuery({
+      queryKey: ['catalog', params.toString()],
+      queryFn: () =>
+        api<{ products: Product[]; total: number; page: number; pages: number }>(
+          `/products?${params.toString()}`,
+        ),
+      placeholderData: keepPreviousData,
+      staleTime: 30000,
+    });
   function update(key: string, value: string) {
     const next = new URLSearchParams(params.toString());
     if (value) next.set(key, value);
@@ -188,7 +190,11 @@ export function CatalogBrowser() {
             <div>
               <h1>{title}</h1>
               <span>
-                {data ? `${data.total} products found` : 'Finding good things for you…'}
+                {data && !isPlaceholderData ? (
+                  `${data.total} products found`
+                ) : (
+                  <SkeletonBlock width={120} height={12} />
+                )}
               </span>
             </div>
             <button
@@ -227,12 +233,8 @@ export function CatalogBrowser() {
           )}
           {isError ? (
             <ErrorState message={error.message} retry={() => refetch()} />
-          ) : isPending ? (
-            <div className="catalog-grid">
-              {Array.from({ length: 8 }, (_, index) => (
-                <ProductSkeleton key={index} />
-              ))}
-            </div>
+          ) : isPending || isPlaceholderData ? (
+            <ProductGridSkeleton />
           ) : data.products.length === 0 ? (
             <EmptyState
               title="No matches this time."

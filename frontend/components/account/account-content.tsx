@@ -1,4 +1,5 @@
 'use client';
+import { AccountSkeleton, AddressesSkeleton } from '../commerce/skeletons';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -10,7 +11,8 @@ import { addressSchema, type Address, type AddressInput } from '../../../shared/
 import { useSession } from '../../hooks/use-session';
 import { useShop } from '../../lib/store';
 import { api } from '../../lib/api';
-import { AddressFields } from '../checkout/checkout-content';
+import { ErrorState } from '../commerce/states';
+import { AddressFields } from '../checkout/address-fields';
 export function AccountContent() {
   const { data, isPending } = useSession();
   const user = data?.user;
@@ -39,7 +41,7 @@ export function AccountContent() {
     mutationFn: (id: string) => api(`/account/addresses/${id}`, { method: 'DELETE' }),
     onSuccess: () => client.invalidateQueries({ queryKey: ['addresses'] }),
   });
-  if (isPending) return <div className="page-loading">Loading your account…</div>;
+  if (isPending) return <AccountSkeleton />;
   if (!user)
     return (
       <main className="page-container">
@@ -103,31 +105,41 @@ export function AccountContent() {
             </button>
           </form>
         )}
-        <div className="address-grid">
-          {addresses.data?.addresses.map((address) => (
-            <article key={address.id}>
-              <span className="address-type">{address.type}</span>
-              <strong>
-                {address.name} · {address.phone}
-              </strong>
-              <p>
-                {address.line1}, {address.locality} {address.city}, {address.state} –{' '}
-                {address.pincode}
-              </p>
-              <button
-                className="text-button"
-                disabled={remove.isPending}
-                onClick={() => remove.mutate(address.id!)}
-              >
-                <Trash2 size={14} />
-                Remove
-              </button>
-            </article>
-          ))}
-        </div>
-        {!addresses.isPending && !addresses.data?.addresses.length && !adding && (
-          <p className="muted">No saved addresses yet.</p>
+        {addresses.isPending ? (
+          <AddressesSkeleton />
+        ) : addresses.isError ? (
+          <ErrorState
+            message={addresses.error.message}
+            retry={() => addresses.refetch()}
+          />
+        ) : (
+          <div className="address-grid">
+            {addresses.data?.addresses.map((address) => (
+              <article key={address.id}>
+                <span className="address-type">{address.type}</span>
+                <strong>
+                  {address.name} · {address.phone}
+                </strong>
+                <p>
+                  {address.line1}, {address.locality} {address.city}, {address.state} –{' '}
+                  {address.pincode}
+                </p>
+                <button
+                  className="text-button"
+                  disabled={remove.isPending}
+                  onClick={() => remove.mutate(address.id!)}
+                >
+                  <Trash2 size={14} />
+                  Remove
+                </button>
+              </article>
+            ))}
+          </div>
         )}
+        {!addresses.isPending &&
+          !addresses.isError &&
+          !addresses.data?.addresses.length &&
+          !adding && <p className="muted">No saved addresses yet.</p>}
       </section>
     </main>
   );

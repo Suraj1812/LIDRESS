@@ -20,8 +20,10 @@ export function AccountSync() {
   useEffect(() => {
     if (!userId) {
       setReadyUser(null);
+      useShop.getState().setAccountSync(null, 'idle');
       return;
     }
+    useShop.getState().setAccountSync(userId, 'loading');
     let cancelled = false;
     async function load() {
       try {
@@ -50,7 +52,10 @@ export function AccountSync() {
         }
         local.hydrateAccount(userId!, items, ids);
         setReadyUser(userId!);
+        local.setAccountSync(userId!, 'ready');
       } catch {
+        if (cancelled) return;
+        useShop.getState().setAccountSync(userId!, 'error');
         toast.error(
           'Account sync is unavailable. Your shopping is still saved on this device.',
         );

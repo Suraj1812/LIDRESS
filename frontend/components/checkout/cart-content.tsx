@@ -1,4 +1,7 @@
 'use client';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
+import { CartSkeleton } from '../commerce/skeletons';
 import Link from 'next/link';
 import { useState } from 'react';
 import {
@@ -13,7 +16,7 @@ import {
 import { toast } from 'sonner';
 import { calculateTotals, getProduct, money } from '../../../shared/catalog';
 import { useShop } from '../../lib/store';
-import { useHydrated } from '../../hooks/use-hydrated';
+import { useShoppingReady } from '../../hooks/use-shopping-ready';
 import { EmptyState } from '../commerce/states';
 export function PriceSummary({
   items,
@@ -74,18 +77,18 @@ export function CartContent() {
   const update = useShop((s) => s.updateQuantity);
   const remove = useShop((s) => s.removeItem);
   const toggle = useShop((s) => s.toggleWishlist);
-  const hydrated = useHydrated();
+  const hydrated = useShoppingReady();
   const location = useShop((s) => s.location);
   const pincode = useShop((s) => s.pincode);
   const [coupon, setCoupon] = useState('');
   const [draft, setDraft] = useState('');
-  if (!hydrated) return <div className="page-loading">Loading your bag…</div>;
+  if (!hydrated) return <CartSkeleton />;
   if (!cart.length)
     return (
       <main className="page-container">
         <EmptyState
-          title="Your next favourite is out there."
-          description="Your bag is empty. Let’s find something good."
+          title="Your bag is empty"
+          description="Add products to get started."
         />
       </main>
     );
@@ -116,7 +119,7 @@ export function CartContent() {
               return (
                 <article className="cart-item" key={`${item.productId}-${item.size}`}>
                   <Link href={`/products/${product.id}`}>
-                    <img src={product.images[0]} alt={product.title} />
+                    <ProgressiveImage src={product.images[0]} alt={product.title} />
                   </Link>
                   <div>
                     <span className="card-brand">{product.brand}</span>

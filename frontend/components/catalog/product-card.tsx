@@ -1,4 +1,6 @@
 'use client';
+import { ProgressiveImage } from '../commerce/progressive-image';
+
 import Link from 'next/link';
 import { Heart, Star } from 'lucide-react';
 import { toast } from 'sonner';
@@ -20,7 +22,7 @@ export function ProductCard({
     <article className={`product-card ${compact ? 'compact-card' : ''}`}>
       <div className="card-image">
         <Link href={`/products/${product.id}`} aria-label={`View ${product.title}`}>
-          <img
+          <ProgressiveImage
             src={product.images[0]}
             alt={product.title}
             loading="lazy"
