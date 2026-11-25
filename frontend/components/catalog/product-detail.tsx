@@ -22,7 +22,12 @@ import { ProductCard } from './product-card';
 import { CategoryNav } from '../layout/category-nav';
 import dynamic from 'next/dynamic';
 import { DeferredContent } from '../commerce/deferred-content';
-import { ReviewsSkeleton, DialogSkeleton } from '../commerce/skeletons';
+import {
+  ReviewsSkeleton,
+  DialogSkeleton,
+  ProductDetailSkeleton,
+} from '../commerce/skeletons';
+import { ErrorState } from '../commerce/states';
 import { useShop } from '../../lib/store';
 import { api } from '../../lib/api';
 import { useCatalog } from '../../hooks/use-catalog';
@@ -38,14 +43,12 @@ const Dialog = dynamic(
 );
 
 export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
-  const { data } = useQuery({
+  const { data, isPending, isError, error, refetch } = useQuery({
     queryKey: ['product', initialProduct.id],
     queryFn: () => api<{ product: Product }>(`/products/${initialProduct.id}`),
-    initialData: { product: initialProduct },
     staleTime: 30000,
-    initialDataUpdatedAt: 0,
   });
-  const product = data.product;
+  const product = data?.product || initialProduct;
   const [image, setImage] = useState(0);
   const [size, setSize] = useState(product.sizes.length === 1 ? product.sizes[0] : '');
   const [sizeError, setSizeError] = useState(false);
@@ -81,6 +84,13 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
       });
     }
   }
+  if (isPending) return <ProductDetailSkeleton />;
+  if (isError)
+    return (
+      <main className="product-page">
+        <ErrorState message={error.message} retry={() => refetch()} />
+      </main>
+    );
   return (
     <>
       <CategoryNav compact />

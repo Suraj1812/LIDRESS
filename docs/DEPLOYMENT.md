@@ -41,7 +41,7 @@ No camera, AI provider key, or paid AI service is used. Keep runtime credentials
 1. Worker `/api/health` returns `status: ok` and `database: connected`.
 2. Storefront `/api/products?limit=80` returns 80 products through the gateway.
 3. Open a product and all gallery images; test search, filters, bag and wishlist.
-4. Register a sample account, save an address, and place a clearly labelled demo order.
+4. Use a dedicated verification account to save an address and submit an unpaid order request. No payment should be collected.
 5. Check order history and cancellation, then confirm the stock reservation is restored.
 6. Check mobile navigation and keyboard access.
 
@@ -52,7 +52,7 @@ No camera, AI provider key, or paid AI service is used. Keep runtime credentials
 | `/api/auth`              | Register, login, logout, current session            |
 | `/api/products`          | Search/filter products, product details and reviews |
 | `/api/account`           | Saved bag, wishlist and addresses                   |
-| `/api/orders`            | Demo checkout, history, detail and cancellation     |
-| `/api/delivery/:pincode` | Sample PIN-based delivery estimate                  |
+| `/api/orders`            | Unpaid order requests, history, detail and cancellation     |
+| `/api/delivery/:pincode` | PIN-based location preferences                  |
 
 Mutations require an allowed Origin. Authenticated routes require a valid session cookie. Prices and totals are recalculated on the server. Orders reserve stock inside a database transaction; repeated checkout keys return the original order.

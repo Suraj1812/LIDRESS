@@ -27,9 +27,14 @@ export const products: Product[] = catalog.map((product) => ({
   ...product,
   rating: 0,
   ratingCount: 0,
+  highlights: product.highlights.filter(
+    (highlight) => !/warranty|ships|returns|delivery/i.test(highlight),
+  ),
   specifications: Object.fromEntries(
     Object.entries(product.specifications).filter(
-      (entry): entry is [string, string] => typeof entry[1] === 'string',
+      (entry): entry is [string, string] =>
+        typeof entry[1] === 'string' &&
+        !['Weight', 'Country of origin'].includes(entry[0]),
     ),
   ),
 }));

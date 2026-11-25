@@ -2,7 +2,7 @@
 
 **Find your everyday.** A shopping product inspired by familiar Indian marketplaces, with an original olive identity.
 
-Browse 80 demo products across men's fashion, footwear, watches, mobiles, electronics, home, accessories, sports and grooming. Each product has six or seven gallery images: 500 local files in total. The camera and virtual try-on features have been removed.
+Browse 80 products across men's fashion, footwear, watches, mobiles, electronics, home, accessories, sports and grooming. Each product has six or seven gallery images: 500 local files in total. The camera and virtual try-on features have been removed.
 
 ## Run locally
 
@@ -21,11 +21,11 @@ Open http://localhost:3000. The Cloudflare API runs on http://localhost:8787. Lo
 - Product galleries, zoom, size selection, related products and reviews.
 - Guest bag and wishlist saved on the device, with account sync after sign-in.
 - Account registration, password sign-in, HTTP-only sessions and saved addresses.
-- Demo checkout, server-calculated totals, welcome coupon, order history and cancellation.
+- Unpaid order requests, server-calculated totals, welcome coupon, order history and cancellation.
 - Transactional inventory reservations and idempotent order creation in Cloudflare D1.
 - Responsive layouts, keyboard-accessible dialogs and reduced-motion support.
 
-Checkout is a simulation: no payments are collected and nothing is shipped. Product prices, ratings and delivery estimates are sample data. Real payments, fulfilment, seller onboarding, email verification and password recovery are not implemented.
+Checkout saves unpaid order requests without collecting money or booking shipments. Ratings come from submitted customer reviews; inventory is read from D1. Catalogue prices and product details are managed in `shared/products.json`. Payments, automated fulfilment, seller onboarding, email verification and password recovery are not enabled.
 
 ## Code map
 

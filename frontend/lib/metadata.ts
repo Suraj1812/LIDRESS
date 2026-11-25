@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+const shareImage = '/brand/lidress-share-v1.jpg';
+
 const origin =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -13,7 +15,7 @@ export function pageMetadata({
   title,
   description,
   path,
-  image = '/brand/lidress-icon.png',
+  image = shareImage,
   noIndex = false,
 }: {
   title: string;
@@ -34,9 +36,25 @@ export function pageMetadata({
       title: socialTitle,
       description,
       url: path,
-      images: [{ url: image, alt: title }],
+      images: [
+        {
+          url: image,
+          alt:
+            image === shareImage
+              ? 'LIDRESS — Find your everyday. Style, tech and home.'
+              : title,
+          ...(image === shareImage
+            ? { width: 1200, height: 630, type: 'image/jpeg' }
+            : {}),
+        },
+      ],
     },
-    twitter: { card: 'summary', title: socialTitle, description, images: [image] },
+    twitter: {
+      card: image === shareImage ? 'summary_large_image' : 'summary',
+      title: socialTitle,
+      description,
+      images: [image],
+    },
     robots: noIndex ? { index: false, follow: true } : { index: true, follow: true },
   };
 }

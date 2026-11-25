@@ -1,0 +1,5 @@
+Tool: built-in image_gen (transparent-background edit)
+Output: frontend/public/brand/lidress-icon-source.png
+Packaged icon: frontend/public/brand/lidress-icon.png
+
+Use case: logo-brand. Edit this generated LIDRESS compact l-shopping-cart monogram. Preserve its beautiful bold forward leaning lowercase l silhouette, swoosh and two round wheels, positions and proportions. REMOVE THE ENTIRE square background; deliver a genuinely transparent alpha background, no colored tile, no checkerboard baked in, no shadow. Change the ivory l to solid near-black charcoal #262820 and change neon green wheels to muted olive #657538. Flat solid colors, crisp clean edges, no gradients or texture. Mark should be readable on white browser tabs. One centered isolated icon, no words. Transparent 1024 square PNG.

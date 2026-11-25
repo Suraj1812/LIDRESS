@@ -17,19 +17,19 @@ let stopping = false;
 let debounce;
 
 function run(args) {
-  const process = spawn(globalThis.process.execPath, [wrangler, ...args], {
+  const launched = spawn(process.execPath, [wrangler, ...args], {
     cwd: backend,
     stdio: 'inherit',
-    env: globalThis.process.env,
+    env: process.env,
   });
-  child = process;
+  child = launched;
   return new Promise((resolve) => {
-    process.once('error', (error) => {
+    launched.once('error', (error) => {
       console.error(error.message);
       resolve(1);
     });
-    process.once('exit', (code) => {
-      if (child === process) child = undefined;
+    launched.once('exit', (code) => {
+      if (child === launched) child = undefined;
       resolve(code ?? 1);
     });
   });
