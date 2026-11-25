@@ -48,9 +48,7 @@ export function LocationDialog() {
         <button className="button primary" disabled={mutation.isPending}>
           {mutation.isPending ? 'Checking…' : 'Use this location'}
         </button>
-        <p className="fine-print">
-          Delivery estimates are illustrative in this demo store.
-        </p>
+        <p className="fine-print">Save your PIN code for shopping.</p>
       </form>
     </Dialog>
   );

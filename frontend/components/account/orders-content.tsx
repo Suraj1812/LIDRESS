@@ -29,7 +29,7 @@ export function OrdersContent({ id }: { id?: string }) {
     mutationFn: (orderId: string) => api(`/orders/${orderId}/cancel`, { method: 'POST' }),
     onSuccess: () => {
       client.invalidateQueries({ queryKey: ['orders'] });
-      toast.success('Demo order cancelled');
+      toast.success('Order cancelled');
     },
   });
   if (sessionPending) return <OrdersSkeleton detail={!!id} />;
@@ -39,7 +39,7 @@ export function OrdersContent({ id }: { id?: string }) {
         <div className="empty-state">
           <Package size={45} />
           <h1>Your orders, all together.</h1>
-          <p>Sign in to view your demo order history.</p>
+          <p>Sign in to view your order history.</p>
           <button
             className="button primary"
             onClick={() => useShop.getState().openAuth()}
@@ -64,7 +64,7 @@ export function OrdersContent({ id }: { id?: string }) {
       ) : !query.data?.length ? (
         <EmptyState
           title="Your story starts with a good find."
-          description="Your demo orders will appear here after checkout."
+          description="Your orders will appear here."
         />
       ) : (
         query.data.map((order) => (
@@ -76,7 +76,7 @@ export function OrdersContent({ id }: { id?: string }) {
               </div>
               <span className={`order-status ${order.status}`}>
                 <CheckCircle2 size={16} />
-                {order.status === 'placed' ? 'Demo order placed' : 'Cancelled'}
+                {order.status === 'placed' ? 'Order placed' : 'Cancelled'}
               </span>
             </header>
             <div className="order-products">
@@ -111,7 +111,7 @@ export function OrdersContent({ id }: { id?: string }) {
                   disabled={cancel.isPending}
                   onClick={() => cancel.mutate(order.id)}
                 >
-                  Cancel demo order
+                  Cancel order
                 </button>
               )}
             </div>
@@ -126,9 +126,7 @@ export function OrdersContent({ id }: { id?: string }) {
                     {order.address.line1}, {order.address.city}, {order.address.state} –{' '}
                     {order.address.pincode}
                   </p>
-                  <small>
-                    Simulation only. No payment collected, no package dispatched.
-                  </small>
+                  <small>No payment has been collected.</small>
                 </div>
               </div>
             )}

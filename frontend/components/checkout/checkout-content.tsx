@@ -68,11 +68,11 @@ export function CheckoutContent() {
         <h1>Checkout</h1>
         <span>
           <ShieldCheck size={16} />
-          Secure demo checkout
+          Checkout
         </span>
       </div>
-      <div className="demo-notice">
-        This is a simulated purchase. No payment is collected and no item will be shipped.
+      <div className="checkout-notice">
+        No online payment is collected. Your order will be saved to your account.
       </div>
       <div className="checkout-layout">
         <section className="shop-panel checkout-steps">
@@ -102,7 +102,7 @@ export function CheckoutContent() {
             <span className="step-number">2</span>
             <div>
               <h2>Delivery address</h2>
-              <p>Use sample details when testing this demo.</p>
+              <p>Enter the address to save with your order.</p>
               <form
                 className="form-stack"
                 id="checkout-form"
@@ -117,8 +117,8 @@ export function CheckoutContent() {
                   </select>
                 </label>
                 <label className="checkbox-label">
-                  <input type="checkbox" required />I understand this is a demo order with
-                  no payment or delivery.
+                  <input type="checkbox" required />I understand that no payment is
+                  collected and delivery is not scheduled.
                 </label>
                 {mutation.error && (
                   <p role="alert" className="form-error">
@@ -132,7 +132,7 @@ export function CheckoutContent() {
             <span className="step-number">3</span>
             <div>
               <h2>Payment</h2>
-              <p>Demo mode — no payment details needed.</p>
+              <p>No payment details required.</p>
             </div>
           </div>
         </section>
@@ -143,7 +143,7 @@ export function CheckoutContent() {
             className="button primary full"
             disabled={!session?.user || mutation.isPending}
           >
-            {mutation.isPending ? 'Placing demo order…' : 'Place demo order'}
+            {mutation.isPending ? 'Placing order…' : 'Place order'}
           </button>
         </PriceSummary>
       </div>

@@ -25,6 +25,8 @@ export interface Product {
 
 export const products: Product[] = catalog.map((product) => ({
   ...product,
+  rating: 0,
+  ratingCount: 0,
   specifications: Object.fromEntries(
     Object.entries(product.specifications).filter(
       (entry): entry is [string, string] => typeof entry[1] === 'string',

@@ -50,13 +50,15 @@ export function ProductCard({
         <Link className="card-title" href={`/products/${product.id}`}>
           {product.title}
         </Link>
-        <div className="rating-row">
-          <span className="rating-pill">
-            {product.rating.toFixed(1)}
-            <Star size={10} fill="currentColor" />
-          </span>
-          <span>({product.ratingCount.toLocaleString('en-IN')})</span>
-        </div>
+        {product.ratingCount > 0 && (
+          <div className="rating-row">
+            <span className="rating-pill">
+              {product.rating.toFixed(1)}
+              <Star size={10} fill="currentColor" />
+            </span>
+            <span>({product.ratingCount.toLocaleString('en-IN')})</span>
+          </div>
+        )}
         <div className="card-price">
           <strong>{money(product.price)}</strong>
           <del>{money(product.mrp)}</del>

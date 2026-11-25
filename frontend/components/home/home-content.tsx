@@ -1,6 +1,9 @@
+'use client';
+import { useCatalog } from '../../hooks/use-catalog';
+import { ShelfSkeleton } from '../commerce/skeletons';
+import { ErrorState } from '../commerce/states';
 import Link from 'next/link';
 import { TicketPercent, ChevronRight } from 'lucide-react';
-import { products } from '../../../shared/catalog';
 import { HeroCarousel } from './hero-carousel';
 import { ProductCard } from '../catalog/product-card';
 function ProductShelf({
@@ -12,6 +15,11 @@ function ProductShelf({
   category?: string;
   ids?: number[];
 }) {
+  const query = useCatalog();
+  if (query.isPending) return <ShelfSkeleton />;
+  if (query.isError)
+    return <ErrorState message={query.error.message} retry={() => query.refetch()} />;
+  const products = query.data.products;
   const selected = ids
     ? ids.map((id) => products.find((product) => product.id === id)!).filter(Boolean)
     : products

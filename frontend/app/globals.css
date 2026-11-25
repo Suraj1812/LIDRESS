@@ -2047,7 +2047,7 @@ select {
 .coupon-form button {
   font-size: 11px;
 }
-.demo-notice {
+.checkout-notice {
   padding: 14px 18px;
   background: #f5ecd8;
   color: #8b7444;
@@ -3273,7 +3273,7 @@ select {
   .checkout-step h2 {
     font-size: 17px;
   }
-  .demo-notice {
+  .checkout-notice {
     font-size: 11px;
   }
   .order-card > header {
@@ -3808,5 +3808,97 @@ select {
   .footer-shortcuts a {
     font-size: 11px;
     padding: 7px 9px;
+  }
+}
+
+/* A full-height document keeps the footer on the viewport edge on short pages. */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.app-content,
+.storefront-content {
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+.site-footer.marketplace-footer {
+  flex-shrink: 0;
+  margin: 0;
+  width: 100%;
+  padding: 28px var(--page-gutter) 0;
+  background: #232c21;
+  border-top: 1px solid #374330;
+}
+.marketplace-footer-inner {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 32px;
+  padding-bottom: 24px;
+}
+.marketplace-footer-logo {
+  display: block;
+  align-self: start;
+  width: 140px;
+}
+.marketplace-footer-logo img {
+  width: 140px;
+  height: 45px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  background: transparent;
+}
+.marketplace-footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.marketplace-footer nav h2 {
+  font:
+    600 12px 'DM Sans',
+    sans-serif;
+  color: #f2f4ee;
+  margin: 0 0 4px;
+}
+.marketplace-footer nav a {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #b8c2b0;
+}
+.marketplace-footer nav a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.marketplace-footer-base {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 14px 0;
+  border-top: 1px solid #ffffff15;
+  color: #a4af9c;
+  font-size: 11px;
+}
+.marketplace-footer-base span {
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .marketplace-footer-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 16px;
+  }
+  .marketplace-footer-logo {
+    grid-column: 1 / -1;
+    width: 120px;
+  }
+  .marketplace-footer-logo img {
+    width: 120px;
+    height: 38px;
+  }
+  .site-footer.marketplace-footer {
+    padding-top: 22px;
   }
 }

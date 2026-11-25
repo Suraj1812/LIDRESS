@@ -124,7 +124,6 @@ export function CatalogBrowser() {
           />
           4 ★ & above
         </label>
-        <small>Demo catalogue ratings</small>
       </div>
       <div className="filter-section">
         <h3>Brand</h3>
@@ -190,7 +189,9 @@ export function CatalogBrowser() {
             <div>
               <h1>{title}</h1>
               <span>
-                {data && !isPlaceholderData ? (
+                {isError ? (
+                  'Products are temporarily unavailable'
+                ) : data && !isPlaceholderData ? (
                   `${data.total} products found`
                 ) : (
                   <SkeletonBlock width={120} height={12} />

@@ -11,7 +11,7 @@ const runtime = new Miniflare({
   modules: true,
   script: 'export default { fetch() { return new Response("test"); } };',
   compatibilityDate: '2026-08-06',
-  d1Databases: ['DB'],
+  d1Databases: ['DB', 'UNMIGRATED'],
 });
 let env: Env;
 let cookie = '';
@@ -71,6 +71,53 @@ describe('Shopping with a real D1 database', () => {
     ).toBe(403);
     expect((await request('/orders')).status).toBe(401);
   });
+  it('serves public reviews and does not invent catalogue ratings', async () => {
+    const reviews = await request('/products/100/reviews', 'GET', undefined, '');
+    expect(reviews.status).toBe(200);
+    expect(await reviews.json()).toEqual({ reviews: [] });
+    const response = await request(
+      '/products?category=fashion&sort=price-asc',
+      'GET',
+      undefined,
+      '',
+    );
+    expect(response.status).toBe(200);
+    const catalog = (await response.json()) as any;
+    expect(
+      catalog.products.every(
+        (product: any) =>
+          product.category === 'fashion' &&
+          product.rating === 0 &&
+          product.ratingCount === 0,
+      ),
+    ).toBe(true);
+    expect(catalog.products.map((product: any) => product.price)).toEqual(
+      catalog.products
+        .map((product: any) => product.price)
+        .sort((a: number, b: number) => a - b),
+    );
+    const rated = (await (await request('/products?rating=4')).json()) as any;
+    expect(rated.total).toBe(0);
+  });
+  it('reports incomplete databases instead of claiming the API is healthy', async () => {
+    const database = await runtime.getD1Database('UNMIGRATED');
+    await database.prepare('CREATE TABLE users (id TEXT)').run();
+    const bindings = { ...env, DB: database as unknown as D1Database };
+    const health = await handleRequest(new Request('http://worker/api/health'), bindings);
+    expect(health.status).toBe(503);
+    expect(((await health.json()) as any).database).toBe('schema-incomplete');
+    const catalogue = await handleRequest(
+      new Request('http://worker/api/products'),
+      bindings,
+    );
+    expect(catalogue.status).toBe(503);
+    expect(((await catalogue.json()) as any).code).toBe('DATABASE_NOT_READY');
+    const reviews = await handleRequest(
+      new Request('http://worker/api/products/100/reviews'),
+      bindings,
+    );
+    expect(reviews.status).toBe(503);
+  });
   it('registers, signs out, and signs in with hashed credentials', async () => {
     const user = {
       name: 'Demo Shopper',
@@ -91,6 +138,25 @@ describe('Shopping with a real D1 database', () => {
     const login = await request('/auth/login', 'POST', user);
     expect(login.status).toBe(200);
     cookie = login.headers.get('set-cookie')!.split(';')[0];
+  });
+  it('calculates ratings only from saved customer reviews', async () => {
+    const initial = (await (await request('/products/1')).json()) as any;
+    expect(initial.product.ratingCount).toBe(0);
+    expect(initial.product.rating).toBe(0);
+    expect(
+      (
+        await request('/products/1/reviews', 'POST', {
+          rating: 4,
+          title: 'Comfortable shirt',
+          comment: 'The fabric feels comfortable for everyday use.',
+        })
+      ).status,
+    ).toBe(201);
+    const updated = (await (await request('/products/1')).json()) as any;
+    expect(updated.product.ratingCount).toBe(1);
+    expect(updated.product.rating).toBe(4);
+    const catalog = (await (await request('/products?rating=4')).json()) as any;
+    expect(catalog.products.map((product: any) => product.id)).toEqual([1]);
   });
   it('persists the bag, wishlist and saved addresses, with size validation', async () => {
     expect(
@@ -172,6 +238,39 @@ describe('Shopping with a real D1 database', () => {
         ).first<any>()
       ).stock,
     ).toBe(before.stock);
+  });
+  it('calculates ratings from persisted reviews and updates rather than duplicating them', async () => {
+    expect(
+      (
+        await request('/products/100/reviews', 'POST', {
+          rating: 5,
+          title: 'Great sound',
+          comment: 'The headphones sound clear and fit comfortably.',
+        })
+      ).status,
+    ).toBe(201);
+    let product = ((await (await request('/products/100')).json()) as any).product;
+    expect(product.rating).toBe(5);
+    expect(product.ratingCount).toBe(1);
+    expect(
+      (
+        await request('/products/100/reviews', 'POST', {
+          rating: 3,
+          title: 'Updated review',
+          comment: 'Updating my experience after using these for longer.',
+        })
+      ).status,
+    ).toBe(201);
+    product = ((await (await request('/products/100')).json()) as any).product;
+    expect(product.rating).toBe(3);
+    expect(product.ratingCount).toBe(1);
+    const all = (await (await request('/products?limit=80')).json()) as any;
+    expect(all.products.find((item: any) => item.id === 100).ratingCount).toBe(1);
+    const reviews = (await (
+      await request('/products/100/reviews', 'GET', undefined, '')
+    ).json()) as any;
+    expect(reviews.reviews).toHaveLength(1);
+    expect(reviews.reviews[0].title).toBe('Updated review');
   });
   it('rolls back the entire order when one item is unavailable', async () => {
     await env.DB.prepare('UPDATE inventory SET stock=0 WHERE product_id=2').run();

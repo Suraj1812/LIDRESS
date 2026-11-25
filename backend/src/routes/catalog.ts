@@ -6,13 +6,30 @@ import { requireUser } from '../auth';
 import { readBody } from '../validation';
 import type { AppEnv } from '../types';
 export const catalogRoutes = new Hono<AppEnv>();
+async function currentProducts(database: D1Database) {
+  const rows = await database
+    .prepare(
+      'SELECT inventory.product_id,inventory.stock,COALESCE(AVG(reviews.rating),0) AS rating,COUNT(reviews.id) AS ratingCount FROM inventory LEFT JOIN reviews ON reviews.product_id=inventory.product_id GROUP BY inventory.product_id',
+    )
+    .all<{ product_id: number; stock: number; rating: number; ratingCount: number }>();
+  const inventory = new Map(rows.results.map((row) => [row.product_id, row]));
+  return products.map((product) => {
+    const current = inventory.get(product.id);
+    return {
+      ...product,
+      stock: current?.stock ?? 0,
+      rating: Math.round((current?.rating ?? 0) * 10) / 10,
+      ratingCount: current?.ratingCount ?? 0,
+    };
+  });
+}
 catalogRoutes.get('/', async (context) => {
   const query = context.req.query();
   const term = (query.q || '').toLowerCase();
   const minimum = Math.max(0, Number(query.minPrice) || 0);
   const maximum = Number(query.maxPrice) || Infinity;
   const brands = query.brand?.split(',') || [];
-  let results = products.filter(
+  let results = (await currentProducts(context.env.DB)).filter(
     (product) =>
       (!query.category ||
         query.category === 'all' ||
@@ -34,15 +51,8 @@ catalogRoutes.get('/', async (context) => {
   const total = results.length;
   const page = Math.max(1, Number(query.page) || 1);
   const limit = Math.min(80, Math.max(1, Number(query.limit) || 24));
-  const stock = await context.env.DB.prepare(
-    'SELECT product_id,stock FROM inventory',
-  ).all<{ product_id: number; stock: number }>();
-  const inventory = new Map(stock.results.map((row) => [row.product_id, row.stock]));
   return context.json({
-    products: results.slice((page - 1) * limit, page * limit).map((product) => ({
-      ...product,
-      stock: inventory.get(product.id) ?? product.stock,
-    })),
+    products: results.slice((page - 1) * limit, page * limit),
     total,
     page,
     pages: Math.ceil(total / limit),
@@ -52,12 +62,10 @@ catalogRoutes.get('/', async (context) => {
 catalogRoutes.get('/:id', async (context) => {
   const product = getProduct(Number(context.req.param('id')));
   if (!product) throw new HTTPException(404, { message: 'Product not found.' });
-  const inventory = await context.env.DB.prepare(
-    'SELECT stock FROM inventory WHERE product_id=?',
-  )
-    .bind(product.id)
-    .first<{ stock: number }>();
-  return context.json({ product: { ...product, stock: inventory?.stock ?? 0 } });
+  const current = (await currentProducts(context.env.DB)).find(
+    (item) => item.id === product.id,
+  )!;
+  return context.json({ product: current });
 });
 catalogRoutes.get('/:id/reviews', async (context) => {
   const productId = Number(context.req.param('id'));

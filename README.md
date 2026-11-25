@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. The Cloudflare API runs on http://localhost:8787. Local D1 migrations run automatically. No API key is required. An optional `frontend/.env.local` can override the API origin; see `frontend/.env.example`.
+Open http://localhost:3000. The Cloudflare API runs on http://localhost:8787. Local D1 migrations run automatically before the API starts, and rerun when the database configuration or SQL migration files change. No API key is required. An optional `frontend/.env.local` can override the API origin; see `frontend/.env.example`.
 
 ## Features
 

@@ -4,31 +4,30 @@ export default function Page() {
   return (
     <main className="page-container help-page">
       <span className="eyebrow">HERE TO HELP</span>
-      <h1>A little clarity goes a long way.</h1>
+      <h1>Help centre</h1>
       <p>
-        LIDRESS is a working demonstration marketplace. You can browse, create an account,
-        save favourites, and place simulated orders.
+        Find information about your account, order requests, and delivery preferences.
       </p>
       {[
         {
           id: 'delivery',
           title: 'Delivery & payments',
-          text: 'No real payments are collected and no items are dispatched. Delivery estimates and stock are demonstration data. Use sample address details when trying checkout.',
+          text: 'Checkout submits an unpaid order request. No money is collected. Delivery availability and timing are confirmed separately; no shipment is booked automatically.',
         },
         {
           id: 'returns',
-          title: 'Returns & cancellations',
-          text: 'You can cancel a placed demo order from My orders. Inventory is restored automatically. There are no real returns or refunds because no money changes hands.',
+          title: 'Order cancellations',
+          text: 'Open My orders to view your submitted requests and cancel an open request. Cancellation releases the reserved stock. As checkout collects no payment, there is no payment to refund.',
         },
         {
           id: 'privacy',
           title: 'Your account & privacy',
-          text: 'Passwords are salted and hashed. Session cookies are HTTP-only. Your account, saved addresses, cart, wishlist, reviews and demo orders are stored in Cloudflare D1. Guest shopping is stored on your device. Never use a password you use elsewhere for a demo account.',
+          text: 'Your account keeps your saved addresses, shopping bag, wishlist, reviews and order history together. Passwords are hashed, and sign-in uses an HTTP-only session cookie. Guest shopping preferences are saved on your device.',
         },
         {
           id: 'images',
-          title: 'Product photography & catalogue',
-          text: 'The catalogue uses demo imagery and illustrative INR prices. Galleries include original product photos and clearly labelled detail crops. LIDRESS is not affiliated with the brands shown.',
+          title: 'Products & reviews',
+          text: 'Product pages show the current catalogue price and available stock. Ratings are calculated from reviews submitted on LIDRESS. Products without submitted reviews are shown as not yet reviewed.',
         },
       ].map((section) => (
         <section key={section.id} id={section.id}>

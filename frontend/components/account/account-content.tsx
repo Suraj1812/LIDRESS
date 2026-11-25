@@ -72,7 +72,7 @@ export function AccountContent() {
         <Link href="/orders">
           <Package />
           <strong>My orders</strong>
-          <span>Track your demo purchases</span>
+          <span>Track your purchases</span>
         </Link>
         <Link href="/wishlist">
           <Heart />

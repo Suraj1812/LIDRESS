@@ -34,6 +34,9 @@ export function ProductReviews({ product }: { product: Product }) {
       }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['reviews', product.id] });
+      queryClient.invalidateQueries({ queryKey: ['product', product.id] });
+      queryClient.invalidateQueries({ queryKey: ['catalog'] });
+      queryClient.invalidateQueries({ queryKey: ['live-catalog'] });
       setWriting(false);
       toast.success('Your review has been saved');
     },
@@ -52,16 +55,17 @@ export function ProductReviews({ product }: { product: Product }) {
           Write a review
         </button>
       </div>
-      <div className="review-overview">
-        <strong>
-          {product.rating.toFixed(1)} <Star fill="currentColor" size={22} />
-        </strong>
-        <span>
-          Sample catalogue rating
-          <br />
-          <small>Customer reviews below are submitted on LIDRESS.</small>
-        </span>
-      </div>
+      {product.ratingCount > 0 && (
+        <div className="review-overview">
+          <strong>
+            {product.rating.toFixed(1)} <Star fill="currentColor" size={22} />
+          </strong>
+          <span>
+            Based on {product.ratingCount} customer{' '}
+            {product.ratingCount === 1 ? 'review' : 'reviews'}
+          </span>
+        </div>
+      )}
       {writing && (
         <form
           className="form-stack review-form"

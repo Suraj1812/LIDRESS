@@ -68,9 +68,7 @@ function LoginForm({ onSuccess }: { onSuccess: () => void }) {
       <button className="button primary full" disabled={mutation.isPending}>
         {mutation.isPending ? 'Signing in…' : 'Sign in'}
       </button>
-      <p className="fine-print">
-        Your account keeps your bag, wishlist, addresses, and demo orders together.
-      </p>
+      <p className="fine-print">Save your bag, wishlist, addresses, and orders.</p>
     </form>
   );
 }
@@ -132,9 +130,7 @@ function RegisterForm({ onSuccess }: { onSuccess: () => void }) {
       <button className="button primary full" disabled={mutation.isPending}>
         {mutation.isPending ? 'Creating your account…' : 'Create account'}
       </button>
-      <p className="fine-print">
-        This demo stores account details securely. It does not process real purchases.
-      </p>
+      <p className="fine-print">Your shopping details are saved to your account.</p>
     </form>
   );
 }

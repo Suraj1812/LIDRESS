@@ -8,8 +8,8 @@ export default function Page() {
         <Store size={45} />
         <h1>Your next chapter in commerce.</h1>
         <p>
-          Seller onboarding is coming later. This version focuses on the customer shopping
-          experience, with demo products and simulated orders.
+          Seller applications are not currently open. You can browse the collection and
+          manage your orders from your account.
         </p>
         <Link className="button primary" href="/search">
           Explore the marketplace

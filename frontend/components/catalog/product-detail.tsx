@@ -17,7 +17,7 @@ import {
   MapPin,
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { products, money, discountPercent, type Product } from '../../../shared/catalog';
+import { money, discountPercent, type Product } from '../../../shared/catalog';
 import { ProductCard } from './product-card';
 import { CategoryNav } from '../layout/category-nav';
 import dynamic from 'next/dynamic';
@@ -25,6 +25,7 @@ import { DeferredContent } from '../commerce/deferred-content';
 import { ReviewsSkeleton, DialogSkeleton } from '../commerce/skeletons';
 import { useShop } from '../../lib/store';
 import { api } from '../../lib/api';
+import { useCatalog } from '../../hooks/use-catalog';
 import { useHydrated } from '../../hooks/use-hydrated';
 
 const ProductReviews = dynamic(
@@ -41,7 +42,8 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
     queryKey: ['product', initialProduct.id],
     queryFn: () => api<{ product: Product }>(`/products/${initialProduct.id}`),
     initialData: { product: initialProduct },
-    staleTime: 10000,
+    staleTime: 30000,
+    initialDataUpdatedAt: 0,
   });
   const product = data.product;
   const [image, setImage] = useState(0);
@@ -57,7 +59,8 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
   const location = useShop((state) => state.location);
   const openLocation = useShop((state) => state.openLocation);
   const saved = hydrated && wishlist.includes(product.id);
-  const related = products
+  const relatedCatalog = useCatalog();
+  const related = (relatedCatalog.data?.products || [])
     .filter((item) => item.category === product.category && item.id !== product.id)
     .slice(0, 6);
   function purchase(buyNow = false) {
@@ -159,20 +162,24 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
               {product.brand}
             </Link>
             <h1>{product.title}</h1>
-            <div className="detail-rating">
-              <span className="rating-pill">
-                {product.rating.toFixed(1)}
-                <Star size={12} fill="currentColor" />
-              </span>
-              <span>{product.ratingCount.toLocaleString('en-IN')} sample ratings</span>
-            </div>
+            {product.ratingCount > 0 && (
+              <div className="detail-rating">
+                <span className="rating-pill">
+                  {product.rating.toFixed(1)}
+                  <Star size={12} fill="currentColor" />
+                </span>
+                <span>
+                  {product.ratingCount.toLocaleString('en-IN')} customer reviews
+                </span>
+              </div>
+            )}
             <span className="special-price">Special price</span>
             <div className="detail-price">
               <strong>{money(product.price)}</strong>
               <del>{money(product.mrp)}</del>
               <span>{discountPercent(product)}% off</span>
             </div>
-            <p className="tax-note">Inclusive of all taxes · Demo catalogue price</p>
+            <p className="tax-note">Inclusive of all taxes</p>
             <p className="product-coupon">
               <Tag size={16} /> 10% off with WELCOME10 · Min. ₹999 · Up to ₹500
             </p>
@@ -219,19 +226,17 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
                   <span>Change</span>
                 </button>
                 <p>
-                  Estimated 3–5 business days to {hydrated ? location : 'your location'}.
+                  Delivery to {hydrated ? location : 'your location'} is confirmed after
+                  ordering.
                 </p>
-                <small>
-                  Illustrative estimate. This store does not dispatch real orders.
-                </small>
+                <small>No payment is taken when submitting an order request.</small>
               </div>
             </div>
             <div className="detail-meta-row">
               <span>Seller</span>
               <div>
-                <strong>LIDRESS Demo Store</strong>
+                <strong>LIDRESS</strong>
                 <p>
-                  Demo marketplace inventory.{' '}
                   {product.stock > 0
                     ? `${product.stock} units available.`
                     : 'Currently out of stock.'}
@@ -349,8 +354,8 @@ export function ProductDetail({ initialProduct }: { initialProduct: Product }) {
             </tbody>
           </table>
           <p className="fine-print">
-            This is an illustrative size guide for the demo catalogue, not a manufacturer
-            fit guarantee.
+            Measurements vary by product. Check the fit and specifications before choosing
+            your size.
           </p>
         </Dialog>
       )}

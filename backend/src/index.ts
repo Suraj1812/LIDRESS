@@ -45,17 +45,43 @@ app.use(
     onError: (context) => context.json({ error: 'Request is too large.' }, 413),
   }),
 );
+const requiredTables = [
+  'users',
+  'sessions',
+  'cart_items',
+  'wishlist',
+  'addresses',
+  'inventory',
+  'orders',
+  'order_items',
+  'reviews',
+];
 app.get('/api/health', async (context) => {
   try {
-    await context.env.DB.prepare('SELECT 1 FROM users LIMIT 1').first();
+    const schema = await context.env.DB.prepare(
+      "SELECT name FROM sqlite_master WHERE type='table'",
+    ).all<{ name: string }>();
+    const tables = new Set(schema.results.map((table) => table.name));
+    if (!requiredTables.every((table) => tables.has(table))) {
+      return context.json(
+        {
+          status: 'initializing',
+          service: 'lidress-commerce',
+          database: 'schema-incomplete',
+        },
+        503,
+      );
+    }
     return context.json({
       status: 'ok',
       service: 'lidress-commerce',
       database: 'connected',
-      mode: 'demo',
     });
   } catch {
-    return context.json({ status: 'initializing', service: 'lidress-commerce' }, 503);
+    return context.json(
+      { status: 'initializing', service: 'lidress-commerce', database: 'unavailable' },
+      503,
+    );
   }
 });
 app.use('/api/*', loadUser);
@@ -83,15 +109,28 @@ app.get('/api/delivery/:pincode', (context) => {
   return context.json({
     pincode,
     city: cities[pincode.slice(0, 2)] || 'Your location',
-    estimate: '3–5 business days',
-    demo: true,
+    deliveryStatus: 'confirmation-required',
   });
 });
 app.notFound((context) => context.json({ error: 'Not found.' }, 404));
-app.onError((error, context) =>
-  error instanceof HTTPException
-    ? context.json({ error: error.message }, error.status)
-    : context.json({ error: 'Something went wrong. Please try again.' }, 500),
-);
+app.onError((error, context) => {
+  if (error instanceof HTTPException)
+    return context.json({ error: error.message }, error.status);
+  console.error('API request failed', {
+    method: context.req.method,
+    path: context.req.path,
+    message: error.message,
+  });
+  if (/no such (?:table|column)/i.test(error.message)) {
+    return context.json(
+      {
+        error: 'Shop data is being prepared. Please try again shortly.',
+        code: 'DATABASE_NOT_READY',
+      },
+      503,
+    );
+  }
+  return context.json({ error: 'Something went wrong. Please try again.' }, 500);
+});
 export const handleRequest = (request: Request, env: Env) => app.fetch(request, env);
 export default app;

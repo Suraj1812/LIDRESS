@@ -67,7 +67,7 @@ export function PriceSummary({
       {children}
       <p className="secure-note">
         <ShieldCheck size={18} />
-        Secure account. Transparent demo checkout.
+        Secure account. Saved shopping details.
       </p>
     </aside>
   );
@@ -169,9 +169,9 @@ export function CartContent() {
                     </div>
                   </div>
                   <small>
-                    Delivery in 3–5 days
+                    Delivery
                     <br />
-                    <span>Demo estimate</span>
+                    <span>Schedule pending</span>
                   </small>
                 </article>
               );
