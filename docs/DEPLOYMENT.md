@@ -2,6 +2,10 @@
 
 The frontend and backend are separate deployments from the same GitHub repository: `Suraj1812/LIDRESS`.
 
+Configured production frontend: `https://lidress.vercel.app`
+
+Production API: `https://lidress-api.singhsuraj44500-0a3.workers.dev`
+
 ## Vercel frontend
 
 Import the repository and choose:
@@ -11,7 +15,7 @@ Import the repository and choose:
 | Project name                          | `lidress`                                |
 | Framework                             | Next.js                                  |
 | Root directory                        | `frontend`                               |
-| Node.js                               | 22.x or newer                            |
+| Node.js                               | 22.12 or newer                           |
 | Build command                         | `npm run build`                          |
 | Install command                       | Default workspace-aware installation     |
 | Output directory                      | Default Next.js output                   |
@@ -34,16 +38,16 @@ npm ci
 npm run deploy --workspace backend
 ```
 
-Before production deployment, set these values in `backend/wrangler.jsonc`:
+The checked-in production values in `backend/wrangler.jsonc` use the assigned Vercel domain. Update them if your frontend domain changes:
 
 ```json
 "vars": {
-  "ALLOWED_ORIGINS": "https://YOUR-VERCEL-PRODUCTION-DOMAIN",
+  "ALLOWED_ORIGINS": "https://lidress.vercel.app",
   "ENVIRONMENT": "production"
 }
 ```
 
-Use the actual assigned domain, not an assumed `lidress.vercel.app` domain. Add other exact origins as a comma-separated string only if needed. Avoid wildcard Vercel preview origins. Local development can include `http://localhost:3000`.
+Use the actual assigned domain, not an assumed `lidress.vercel.app` domain. Add other exact origins as a comma-separated string only if needed. Avoid wildcard Vercel preview origins. The `dev` script overrides origin and environment for `http://localhost:3000` without changing production settings.
 
 The `TOKEN_RATE_LIMITER` binding is declared in the configuration. It limits token creation to five requests per minute per IP. CORS and IP rate limits are basic abuse controls, not user authentication or an account-wide spending budget. For a public paid AI launch, add store authentication or Turnstile plus provider spending controls. Free overlay mode never calls the token endpoint.
 

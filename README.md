@@ -6,7 +6,7 @@ A men's clothing storefront with a free, body-tracked virtual fitting room. Buil
 
 ## Run locally
 
-Use Node.js 22 or newer. From the repository root:
+Use Node.js 22.12 or newer. From the repository root:
 
 ```sh
 npm install
